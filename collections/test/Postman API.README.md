@@ -23,6 +23,7 @@
 - `files` — An **array** of schema files that contains the following:
     - `path` — A **string** value that contains the schema file's path.
     - `content` — A **string** value that contains the schema file's stringified contents.
+ 
  ---
               - PUT Create or update a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
@@ -37,6 +38,7 @@
 - If the provided file path exists, the file will be updated with the new contents.
 - If the provided file path does **not** exist, then a new schema file will be created.
 - If the file path contains a `/` (forward slash) character, then a folder is created. For example, if the file path is the `dir/schema.json` value, then a `dir` folder is created with the `schema.json` file inside.
+ 
  ---
               - GET Get a schema `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}`
 
@@ -53,6 +55,7 @@ You can use this API to do the following:
 **Note:**
 
 The `versionId` query parameter is a **required** parameter for API viewers.
+ 
  ---
               - GET Get schema files `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files`
 
@@ -62,6 +65,7 @@ The `versionId` query parameter is a **required** parameter for API viewers.
 **Note:**
 
 The `versionId` query parameter is a **required** parameter for API viewers.
+ 
  ---
               - GET Get schema file contents `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
@@ -71,11 +75,13 @@ The `versionId` query parameter is a **required** parameter for API viewers.
 **Note:**
 
 The `versionId` query parameter is a **required** parameter for API viewers.
+ 
  ---
               - DELETE Delete a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
               
   *Description*: Deletes a file in an API schema.
+ 
  ---
           - Version
               - POST Create a version `https://api.getpostman.com/apis/{{apiId}}/versions`
@@ -96,11 +102,13 @@ Include the following properties in the request body:
 You can include the following optional properties:
 
 - `releaseNotes` — A **string** value that contains the Markdown-supported version summary.
+ 
  ---
               - GET Get all versions `https://api.getpostman.com/apis/{{apiId}}/versions`
 
               
   *Description*: Gets all the published versions of an API.
+ 
  ---
               - GET Get a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
 
@@ -111,6 +119,7 @@ You can include the following optional properties:
 
 - For API editors, this endpoint returns an HTTP `302 Found` status code when the version status is pending. It also returns the `/apis/{apiId}/tasks/{taskId}` task status response header.
 - For API viewers, this endpoint returns an HTTP `404 Not Found` when the version status is pending.
+ 
  ---
               - PUT Update a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
@@ -124,6 +133,7 @@ You can include the following optional properties:
 **Note:**
 
 This endpoint returns an HTTP `404 Not Found` response when an API version is pending publication.
+ 
  ---
               - DELETE Delete a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
 
@@ -133,6 +143,7 @@ This endpoint returns an HTTP `404 Not Found` response when an API version is pe
 **Note:**
 
 This endpoint returns an HTTP `404 Not Found` response when an API version is pending publication.
+ 
  ---
           - Collections
               - GET Get a collection `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}`
@@ -143,6 +154,7 @@ This endpoint returns an HTTP `404 Not Found` response when an API version is pe
 **Note:**
 
 The `versionId` query parameter is a **required** parameter for API viewers.
+ 
  ---
               - POST Add a collection `https://api.getpostman.com/apis/{{apiId}}/collections`
 
@@ -155,6 +167,7 @@ The `versionId` query parameter is a **required** parameter for API viewers.
     - `options` — An **object** that contains advanced creation options and their values. You can find a complete list of properties and their values in Postman's [OpenAPI 3.0 to Postman Collection v2.1.0 Converter OPTIONS documentation](https://github.com/postmanlabs/openapi-to-postman/blob/develop/OPTIONS.md). **These properties are case-sensitive.**
 
 For examples of each method, see the collection's response examples.
+ 
  ---
               - PUT Sync collection with schema `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}/sync-with-schema-tasks`
 
@@ -166,12 +179,14 @@ This is an asynchronous endpoint that returns an HTTP `202 Accepted` response. T
 **Note:**
 
 This endpoint only supports the OpenAPI 3 schema type.
+ 
  ---
           - Tags
               - GET Get an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
 
               
   *Description*: Gets all the tags associated with an API.
+ 
  ---
               - PUT Update an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
 
@@ -183,6 +198,7 @@ This endpoint only supports the OpenAPI 3 schema type.
 - You can only add a maximum of five tags to an API.
 - Tags must be between `2` and `64` characters long.
 - Tags must follow the `^[a-z][a-z0-9-]\\\\*[a-z0-9]+$` pattern.
+ 
  ---
           - POST Create an API `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
 
@@ -196,6 +212,7 @@ You can include the following optional properties:
 
 - `summary` — A **string** value that contains a summary of the API.
 - `description` — A **string** value that contains the description of the API.
+ 
  ---
           - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
@@ -205,6 +222,7 @@ You can include the following optional properties:
 - `name` — A **string** value that contains the API's name.
 - `summary` — A **string** value that contains a summary of the API.
 - `description` — A **string** value that contains the description of the API. This supports Markdown formatting.
+ 
  ---
           - GET Get all APIs `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
 
@@ -214,6 +232,7 @@ You can include the following optional properties:
 **Note:**
 
 This endpoint only returns APIs created or migrated in Postman v10 and higher.
+ 
  ---
           - GET Get an API `https://api.getpostman.com/apis/{{apiId}}`
 
@@ -224,16 +243,19 @@ This endpoint only returns APIs created or migrated in Postman v10 and higher.
 
 - Git-connected APIs will **only** return the `versions` and `gitInfo` query responses. This is because schema and collection information is stored in the connected Git repository. The `gitInfo` object only lists the repository and folder locations of the files.
 - API viewers can only use the `versions` option in the `include` query parameter.
+ 
  ---
           - DELETE Delete an API `https://api.getpostman.com/apis/{{apiId}}`
 
           
   *Description*: Deletes an API.
+ 
  ---
           - GET Get status of an asynchronous task `https://api.getpostman.com/apis/{{apiId}}/tasks/{{taskId}}`
 
           
   *Description*: Gets the status of an asynchronous task.
+ 
  ---
       - v9
           - API Version
@@ -245,6 +267,7 @@ This endpoint only returns APIs created or migrated in Postman v10 and higher.
 **In Postman v9 and earlier:**
 
 When you create an API, the system creates a single, default API version. You can use this version’s ID with any endpoints that require an API version ID.
+ 
  ---
               - POST Create an API version `https://api.getpostman.com/apis/{{apiId}}/versions`
 
@@ -263,6 +286,7 @@ Creates a new API version. Include the following request body properties in the 
         - `documentation`
         - `test`
         - `environment`
+ 
  ---
               - GET Get an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
@@ -272,6 +296,7 @@ Creates a new API version. Include the following request body properties in the 
 **In Postman v9 and earlier:**
 
 When you create an API, the system creates a single, default API version. You can use this version’s ID with any endpoints that require an API version ID.
+ 
  ---
               - PUT Update an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
@@ -281,6 +306,7 @@ When you create an API, the system creates a single, default API version. You ca
 Updates an API version. Include the following request body properties in the `version` object:
 
 - `name` — A **string** that contains the API version's name.
+ 
  ---
               - DELETE Delete an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
@@ -288,6 +314,7 @@ Updates an API version. Include the following request body properties in the `ve
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Deletes an API version.
+ 
  ---
           - Relations
               - GET Get unclassified relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/unclassified`
@@ -298,6 +325,7 @@ Deletes an API version.
 Gets all of an API version's unclassified relations.
 
 Unclassified relations are used for documentation and testing. This is the default relation type.
+ 
  ---
               - GET Get monitor relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/monitor`
 
@@ -305,6 +333,7 @@ Unclassified relations are used for documentation and testing. This is the defau
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets an API version's monitor relations.
+ 
  ---
               - GET Get  documentation relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/documentation`
 
@@ -312,16 +341,19 @@ Gets an API version's monitor relations.
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets an API version's documentation relations.
+ 
  ---
               - GET Get integration test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/integrationtest`
 
               
   *Description*: **This endpoint is deprecated.**
+ 
  ---
               - GET Get test suite relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/testsuite`
 
               
   *Description*: **This endpoint is deprecated.**
+ 
  ---
               - GET Get all linked relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
 
@@ -334,6 +366,7 @@ In Postman v10 and higher, this endpoint returns the following:
 
 - The `unclassified` relation is for documentation and testing. This is the default relation type.
 - The `apiDefinition` relation is the relation used for API definitions.
+ 
  ---
               - GET Get all test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/test`
 
@@ -341,11 +374,13 @@ In Postman v10 and higher, this endpoint returns the following:
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets all of an API version's test relations.
+ 
  ---
               - PUT Sync API relations with definition `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/:relationType/:entityId/syncWithSchema`
 
               
   *Description*: Syncs an API version's relation with the API's definition.
+ 
  ---
               - GET Get environment relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/environment`
 
@@ -353,11 +388,13 @@ Gets all of an API version's test relations.
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets an API version's environment relations.
+ 
  ---
               - GET Get contract test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/contracttest`
 
               
   *Description*: **This endpoint is deprecated.**
+ 
  ---
               - POST Create relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
 
@@ -386,6 +423,7 @@ The following is **deprecated** in Postman API v10 and higher:
 The endpoint accepts multiple `relationType` arrays in a single call. For an example, see the example response documentation.
 
 The `documentation` and `test` values returned in the response are the relation ID values, **not** the collection ID values.
+ 
  ---
           - Schema
               - GET Get a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
@@ -394,6 +432,7 @@ The `documentation` and `test` values returned in the response are the relation 
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets information about an API's definition.
+ 
  ---
               - POST Create a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas`
 
@@ -421,6 +460,7 @@ Creates an API definition. The request body must contain a `schema` object with 
     - WSDL — `xml`
     - Protobuf — `proto`
 - `schema` — A **string** value that contains the API definition's contents.
+ 
  ---
               - POST Create a collection from a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}/collections`
 
@@ -442,6 +482,7 @@ You can also include the following additional properties in the request body:
     - `testsuite` — **Deprecated.**
     - `documentation`
 - `options` — An **object** that contains advanced creation options and their values. You can find a complete list of properties and their values in Postman's [OpenAPI 3.0 to Postman Collection v2.1.0 Converter OPTIONS documentation](https://github.com/postmanlabs/openapi-to-postman/blob/develop/OPTIONS.md). **These properties are case-sensitive.**
+ 
  ---
               - PUT Update a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
 
@@ -469,6 +510,7 @@ Updates an API definition. The request body must contain a `schema` object with 
     - WSDL — `xml`
     - Protobuf — `proto`
 - `schema` — Optional. A **string** value that contains the API definition's contents.
+ 
  ---
           - Release
               - GET Get an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
@@ -477,6 +519,7 @@ Updates an API definition. The request body must contain a `schema` object with 
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets information about an API version's release.
+ 
  ---
               - GET Get all API releases `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
 
@@ -484,6 +527,7 @@ Gets information about an API version's release.
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Gets information about all of an API version's releases.
+ 
  ---
               - POST Create an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
 
@@ -502,6 +546,7 @@ You can include the following optional properties:
 - `summary` — A **string** value that contains the release's summary.
 - `description` — A **string** value that contains the release's description.
 - `gitTag` — A **string** value that contains a valid [Git tag](https://docs.github.com/en/rest/git/tags) ID. The tag must exist in the API's connected Git repository.
+ 
  ---
               - PATCH Update an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
@@ -517,6 +562,7 @@ Updates an API version's release. Include at least one of the following properti
 - `summary` — A **string** value that contains the release's summary.
 - `description` — A **string** value that contains the release's description.
 - `gitTag` — A **string** value that contains a valid [Git tag](https://docs.github.com/en/rest/git/tags) ID. The tag must exist in the API's connected Git repository.
+ 
  ---
               - DELETE Delete an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
@@ -524,11 +570,13 @@ Updates an API version's release. Include at least one of the following properti
   *Description*: **This endpoint is deprecated in Postman v10 and higher.**
 
 Deletes an API version's release.
+ 
  ---
           - GET Get all APIs `https://api.getpostman.com/apis`
 
           
   *Description*: Gets information about all APIs.
+ 
  ---
           - POST Create an API `https://api.getpostman.com/apis`
 
@@ -542,11 +590,13 @@ You can include the following optional properties:
 
 *   `summary` — A **string** value that contains a summary of the API.
 *   `description` — A **string** value that contains the description of the API.
+ 
  ---
           - GET Get an API `https://api.getpostman.com/apis/{{apiId}}`
 
           
   *Description*: Gets information about an API.
+ 
  ---
           - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
@@ -556,11 +606,13 @@ You can include the following optional properties:
 *   `name` — A **string** value that contains the API's name.
 *   `summary` — A **string** value that contains a summary of the API.
 *   `description` — A **string** value that contains the description of the API.
+ 
  ---
           - DELETE Delete an API `https://api.getpostman.com/apis/{{apiId}}`
 
           
   *Description*: Deletes an API.
+ 
  ---
   - Collections
       - Items
@@ -569,6 +621,7 @@ You can include the following optional properties:
 
               
   *Description*: Gets information about a folder in a collection.
+ 
  ---
               - POST Create a folder `https://api.getpostman.com/collections/{{collectionId}}/folders`
 
@@ -580,6 +633,7 @@ You can use this endpoint to to import requests and responses into a newly-creat
 **Note:**
 
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a folder with a blank name.
+ 
  ---
               - PUT Update a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
@@ -589,17 +643,20 @@ It is recommended that you pass the `name` property in the request body. If you 
 **Note:**
 
 This endpoint acts like a PATCH method. It only updates the values that you pass in the request body (for example, the `name` property). The endpoint does **not** update the entire resource.
+ 
  ---
               - DELETE Delete a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
               
   *Description*: Deletes a folder in a collection.
+ 
  ---
           - Requests
               - GET Get a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
               
   *Description*: Gets information about a request in a collection.
+ 
  ---
               - POST Create a request `https://api.getpostman.com/collections/{{collectionId}}/requests`
 
@@ -609,6 +666,7 @@ This endpoint acts like a PATCH method. It only updates the values that you pass
 **Note:**
 
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a request with a blank name.
+ 
  ---
               - PUT Update a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
@@ -620,17 +678,20 @@ It is recommended that you pass the `name` property in the request body. If you 
 - You must pass a collection ID (`12ece9e1-2abf-4edc-8e34-de66e74114d2`), not a collection UID (`12345678-12ece9e1-2abf-4edc-8e34-de66e74114d2`), in this endpoint.
 - This endpoint acts like a PATCH method. It only updates the values that you pass in the request body (for example, the `name` property). The endpoint does **not** update the entire resource.
 - This endpoint does not support changing the folder of a request.
+ 
  ---
               - DELETE Delete a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
               
   *Description*: Deletes a request in a collection.
+ 
  ---
           - Responses
               - GET Get a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
               
   *Description*: Gets information about a response in a collection.
+ 
  ---
               - POST Create a response `https://api.getpostman.com/collections/{{collectionId}}/responses?request={{requestId}}`
 
@@ -640,6 +701,7 @@ It is recommended that you pass the `name` property in the request body. If you 
 **Note:**
 
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a response with a blank name.
+ 
  ---
               - PUT Update a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
@@ -650,17 +712,20 @@ It is recommended that you pass the `name` property in the request body. If you 
 
 - You must pass a collection ID (`12ece9e1-2abf-4edc-8e34-de66e74114d2`), not a collection UID (`12345678-12ece9e1-2abf-4edc-8e34-de66e74114d2`), in this endpoint.
 - This endpoint acts like a PATCH method. It only updates the values that you pass in the request body (for example, the `name` property). The endpoint does **not** update the entire resource.
+ 
  ---
               - DELETE Delete a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
               
   *Description*: Deletes a response in a collection.
+ 
  ---
       - Tags
           - GET Get a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
 
           
   *Description*: Gets all the tags associated with a collection.
+ 
  ---
           - PUT Update a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
 
@@ -673,6 +738,7 @@ It is recommended that you pass the `name` property in the request body. If you 
     
 - Tags must be between `2` and `64` characters long.
 - Tags must follow the `^[a-z][a-z0-9-]\\\\*[a-z0-9]+$` pattern.
+ 
  ---
       - Forks
           - POST Create a fork `https://api.getpostman.com/collections/fork/{{collectionId}}?workspace={{workspaceId}}`
@@ -681,6 +747,7 @@ It is recommended that you pass the `name` property in the request body. If you 
   *Description*: Creates a [fork](https://learning.postman.com/docs/collaborating-in-postman/version-control/#creating-a-fork) from an existing collection into a workspace. Include the following required request body properties:
 
 *   `label` — The fork's label.
+ 
  ---
           - POST Merge a fork `https://api.getpostman.com/collections/merge`
 
@@ -696,6 +763,7 @@ You can also include the following optional properties in the request body:
 *   `strategy` — The fork's merge strategy. One of:
     *   `deleteSource` — The system **deletes** the forked collection after a successful merge into the destination collection.
     *   `updateSourceWithDestination` — **Default.** The system only merges the forked collection into the destination collection.
+ 
  ---
       - Transformations
           - GET Transform collection to OpenAPI `https://api.getpostman.com/collections/{{collectionId}}/transformations`
@@ -706,6 +774,7 @@ You can also include the following optional properties in the request body:
 **Note:**
 
 This does **not** create an API.
+ 
  ---
       - POST Create a collection `https://api.getpostman.com/collections`
 
@@ -726,16 +795,19 @@ For more information about the Collection Format, see the [Postman Collection Fo
     - `info` object — Use the `definitions.info` entry.
     - `item` object — Use the `definitions.items` entry.
 - For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).
+ 
  ---
       - GET Get a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
       
   *Description*: Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).
+ 
  ---
       - DELETE Delete a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
       
   *Description*: Deletes a collection.
+ 
  ---
       - PUT Replace a collection's data `https://api.getpostman.com/collections/{{collectionId}}`
 
@@ -761,6 +833,7 @@ For all other possible values, refer to the [collection.json schema file](https:
 **Note:**
 
 To copy another collection's contents to the given collection, **remove** all ID values before you pass it in this endpoint. If you do not, this endpoint returns an error. These values include the `id`, `uid`, and `postman_id` values.
+ 
  ---
       - PATCH Update part of a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
@@ -773,22 +846,26 @@ To copy another collection's contents to the given collection, **remove** all ID
     
 
 For more information about the Collection Format, see the [Postman Collection Format documentation](https://learning.postman.com/collection-format/getting-started/overview/).
+ 
  ---
       - GET Get all collections `https://api.getpostman.com/collections`
 
       
   *Description*: Gets all of your [collections](https://www.getpostman.com/docs/collections). The response includes all of your subscribed collections.
+ 
  ---
   - Environments
       - GET Get an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
       
   *Description*: Gets information about an environment.
+ 
  ---
       - DELETE Delete an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
       
   *Description*: Deletes an environment.
+ 
  ---
       - POST Create an environment `https://api.getpostman.com/environments`
 
@@ -804,6 +881,7 @@ You can also include the following properties:
     * `value` — The variable's value.
     * `enabled` — If true, enable the variable.
     * `type` — The variable's type. One of: `secret`, `default`, or `any`.
+ 
  ---
       - PUT Update an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
@@ -819,11 +897,13 @@ You can also include the following optional properties:
     * `value` — The variable's value.
     * `enabled` — If true, enable the variable.
     * `type` — The variable's type. One of: `secret`, `default`, or `any`.
+ 
  ---
       - GET Get all environments `https://api.getpostman.com/environments`
 
       
   *Description*: Gets information about all of your [environments](https://learning.postman.com/docs/sending-requests/managing-environments/).
+ 
  ---
   - Import
       - POST Import an OpenAPI definition `https://api.getpostman.com/import/openapi`
@@ -852,6 +932,7 @@ For more information, refer to the collection's examples.
 **Note:**
 
 If you import with the `file` input method, you **must** use the Postman desktop app. The Postman web app does not support this method type.
+ 
  ---
       - POST Import an exported Postman data dump file `https://api.getpostman.com/import/exported`
 
@@ -863,6 +944,7 @@ For more information, read our [Exporting data dumps](https://learning.postman.c
 ## Important
 
 This endpoint is **deprecated**.
+ 
  ---
   - Mocks
       - Call Logs
@@ -872,17 +954,20 @@ This endpoint is **deprecated**.
   *Description*: Gets a mock server's call logs. You can get a maximum of 6.5MB of call logs **or** a total of 100 call logs, whichever limit is met first in one API call.
 
 Call logs contain exchanged request and response data made to mock servers. The logs provide visibility into how the mock servers are being used. You can log data to debug, test, analyze, and more, depending upon the use case.
+ 
  ---
       - Server Responses
           - GET Get a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
           
   *Description*: Gets information about a server response.
+ 
  ---
           - GET Get all server responses `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
 
           
   *Description*: Gets all of a mock server's server responses.
+ 
  ---
           - POST Create a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
 
@@ -909,6 +994,7 @@ You can also include the following optional properties:
     - `key` — A **string** that contains the header's key.
     - `value` — A **string** that contains the header key's value. This value defines the corresponding value for the header key.
 - `body` — A **string** that contains a response body that returns when you call the mock server.
+ 
  ---
           - PUT Update a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
@@ -921,16 +1007,19 @@ You can also include the following optional properties:
     - `key` — A **string** that contains the header's key.
     - `value` — A **string** that contains the header key's value. This value defines the corresponding value for the header key.
 - `body` — A **string** that contains a response body that returns when you call the mock server.
+ 
  ---
           - DELETE Delete a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
           
   *Description*: Deletes a mock server's server response.
+ 
  ---
       - GET Get a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
       
   *Description*: Gets information about a mock server.
+ 
  ---
       - POST Create a mock server `https://api.getpostman.com/mocks`
 
@@ -947,6 +1036,7 @@ You can include the following optional properties in the request body:
 - `environment` — A **string** that contains the environment ID to associate with the mock server.
 - `name` — A **string** that contains the the mock server's name.
 - `private` — A **boolean** value that, if true, sets the mock server as private. By default, mock servers are public and can receive requests from anyone and anywhere.
+ 
  ---
       - GET Get all mock servers `https://api.getpostman.com/mocks`
 
@@ -956,21 +1046,25 @@ You can include the following optional properties in the request body:
 **Note:**
 
 If you pass both the `teamId` and `workspace` query parameters, this endpoint only accepts the `workspace` query.
+ 
  ---
       - DELETE Delete a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
       
   *Description*: Deletes a mock server.
+ 
  ---
       - DELETE Unpublish a mock server `https://api.getpostman.com/mocks/{{mockId}}/unpublish`
 
       
   *Description*: Unpublishes a mock server. Unpublishing a mock server sets its **Access Control** configuration setting to private.
+ 
  ---
       - POST Publish a mock server `https://api.getpostman.com/mocks/{{mockId}}/publish`
 
       
   *Description*: Publishes a mock server. Publishing a mock server sets its **Access Control** configuration setting to public.
+ 
  ---
       - PUT Update a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
@@ -983,6 +1077,7 @@ If you pass both the `teamId` and `workspace` query parameters, this endpoint on
 - `versionTag` — A **string** that contains the API's version tag ID.
 - `config` — An **object** that contains the following properties:
     - `serverResponseId` — A **string** that contains the server response ID. This sets the given server response as the default response for each request.
+ 
  ---
   - Monitors
       - POST Create a monitor `https://api.getpostman.com/monitors`
@@ -1011,26 +1106,31 @@ Creates a monitor. Include the following properties in the request body:
 | Every day at 5pm | `0 17 \\\* \\\* \\\*` |
 | Every Monday at 12pm | `0 12 \\\* \\\* MON` |
 | Every weekday (Monday - Friday) at 6am | `0 6 \\\* \\\* MON-FRI` |
+ 
  ---
       - POST Run a monitor `https://api.getpostman.com/monitors/{{monitorId}}/run`
 
       
   *Description*: Runs a monitor and returns its run results.
+ 
  ---
       - DELETE Delete a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
       
   *Description*: Deletes a monitor.
+ 
  ---
       - GET Get all monitors `https://api.getpostman.com/monitors`
 
       
   *Description*: Gets all monitors.
+ 
  ---
       - GET Get a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
       
   *Description*: Gets information about a monitor.
+ 
  ---
       - PUT Update a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
@@ -1053,6 +1153,7 @@ Creates a monitor. Include the following properties in the request body:
 | Every day at 5pm | `0 17 \\* \\* \\*` |
 | Every Monday at 12pm | `0 12 \\* \\* MON` |
 | Every weekday (Monday - Friday) at 6am | `0 6 \\* \\* MON-FRI` |
+ 
  ---
   - Private API Network
       - Element Requests
@@ -1065,11 +1166,13 @@ Creates a monitor. Include the following properties in the request body:
 - `status` — A **string** value that contains the request's status. One of:
     - `denied`
     - `approved`
+ 
  ---
           - GET Get all element add requests `https://api.getpostman.com/network/private/network-entity/request/all`
 
           
   *Description*: Gets a list requests to add elements to the [Private API Network](https://learning.postman.com/docs/collaborating-in-postman/adding-private-network/).
+ 
  ---
       - GET Get all elements and folders `https://api.getpostman.com/network/private`
 
@@ -1079,6 +1182,7 @@ Creates a monitor. Include the following properties in the request body:
 **Note:**
 
 The `limit` and `offset` parameters are separately applied to elements and folders. For example, if you query a `limit` value of `10` and an `offset` value `0`, the endpoint returns 10 elements and 10 folders for a total of 20 items. The `totalCount` property in the `meta` response is the total count of **both** elements and folders.
+ 
  ---
       - POST Add an element or folder `https://api.getpostman.com/network/private`
 
@@ -1113,6 +1217,7 @@ In the `elementType` object, include the following values:
 - `name` — A **string** value that contains the folder's name.
 - `description` — A **string** value that contains the folder's description.
 - `parentFolderId` — An **integer** value that contains the folder's parent folder ID.
+ 
  ---
       - PUT Update an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
 
@@ -1145,6 +1250,7 @@ You can include the following optional properties:
 
 - `description` — A **string** value that contains the folder's new description.
 - `name` — A **string** value that contains the folder's new name.
+ 
  ---
       - DELETE Remove an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
 
@@ -1154,6 +1260,7 @@ You can include the following optional properties:
 **Note:**
 
 Removing an API, collection, or workspace element does **not** delete it. It only removes it from the Private API Network folder.
+ 
  ---
   - Workspaces
       - Tags
@@ -1161,6 +1268,7 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
 
           
   *Description*: Gets all the tags associated with a workspace.
+ 
  ---
           - PUT Update a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
 
@@ -1174,12 +1282,14 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
 - Tags must be between `2` and `64` characters long.
     
 - Tags must follow the `^[a-z][a-z0-9-]\\\\*[a-z0-9]+$` pattern.
+ 
  ---
       - Global Variables
           - GET Get global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
 
           
   *Description*: Gets a workspace's global [variables](https://learning.postman.com/docs/sending-requests/variables/#variable-scopes).
+ 
  ---
           - PUT Update global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
 
@@ -1190,6 +1300,7 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
 - `type` — A **string** that contains the [type](https://learning.postman.com/docs/sending-requests/variables/#variable-types) of variable. Accepts `default` or `secret`.
 - `value` — A **string** that contains the variable's value.
 - `enabled` — A **boolean** that, if true, enables the variable.
+ 
  ---
       - PUT Update a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
@@ -1214,6 +1325,7 @@ If you have a linked collection or environment, note the following:
 - The endpoint does **not** create a clone of a collection or environment.
 - Any changes you make to a linked collection or environment changes them in **all** workspaces.
 - If you delete a collection or environment linked between workspaces, the system deletes it in **all** the workspaces.
+ 
  ---
       - POST Create a workspace `https://api.getpostman.com/workspaces`
 
@@ -1239,6 +1351,7 @@ If you have a linked collection or environment, note the following:
 - The endpoint does **not** create a clone of a collection or environment.
 - Any changes you make to a linked collection or environment changes them in **all** workspaces.
 - If you delete a collection or environment linked between workspaces, the system deletes it in **all** the workspaces.
+ 
  ---
       - GET Get a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
@@ -1265,6 +1378,7 @@ We have **deprecated** the `name` and `uid` responses in the following array of 
 - `mocks`
 - `monitors`
 - `apis`
+ 
  ---
       - DELETE Delete a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
@@ -1274,6 +1388,7 @@ We have **deprecated** the `name` and `uid` responses in the following array of 
 ### **Important:**
 
 If you delete a workspace that has a linked collection or environment with another workspace, this will delete the collection and environment in **all** workspaces.
+ 
  ---
       - GET Get all workspaces `https://api.getpostman.com/workspaces`
 
@@ -1289,6 +1404,7 @@ This endpoint's response contains the `visibility` field. [Visibility](https://l
 - `private` — Only invited team members can access the workspace ([Professional and Enterprise plans only](https://www.postman.com/pricing)).
 - `public` — Everyone can access the workspace.
 - `partner` — Only invited team members and [partners](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/partner-workspaces/) can access the workspace ([Enterprise Ultimate plans](https://www.postman.com/pricing) only).
+ 
  ---
   - Tags
       - GET Get elements by tag `https://api.getpostman.com/tags/:slug/entities`
@@ -1299,6 +1415,7 @@ This endpoint's response contains the `visibility` field. [Visibility](https://l
 **Note:**
 
 Tagging is available on [Postman Enterprise plans](https://www.postman.com/pricing/).
+ 
  ---
   - Secret Scanner
       - Detected Secrets
@@ -1318,11 +1435,13 @@ Include the following in the request body:
     - `ACCEPTED_RISK` — The Secret Scanner found the secret, but user accepts the risk of publishing it.
         
 - `workspaceId` — The ID of the workspace that contains the secret.
+ 
  ---
           - GET Get detected secrets locations `https://api.getpostman.com/detected-secrets/{{secretId}}/locations?workspaceId={{workspaceId}}`
 
           
   *Description*: Gets the locations of secrets detected by Postman's [Secret Scanner](https://learning.postman.com/docs/administration/secret-scanner/).
+ 
  ---
           - POST Search detected secrets `https://api.getpostman.com/detected-secrets-queries`
 
@@ -1340,11 +1459,13 @@ You can include the following properties in the request body:
     - `ACCEPTED_RISK` — The Secret Scanner found the secret, but user accepts the risk of publishing it.
 - `workspaceIds` — A list of workspaces IDs to query.
 - `workspaceVisibilities` — A list of workspace [visibility settings](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/managing-workspaces/#changing-workspace-visibility) to query. This currently supports the `team` and `public` settings.
+ 
  ---
       - GET Get secret types `https://api.getpostman.com/secret-types`
 
       
   *Description*: Gets the metadata of the secret types supported by Postman's [Secret Scanner](https://learning.postman.com/docs/administration/secret-scanner/). You can use a secret type's ID in the response to query data with the POST `/detected-secrets/{secretId}` endpoint.
+ 
  ---
   - User
       - GET Get authenticated user `https://api.getpostman.com/me`
@@ -1355,6 +1476,7 @@ You can include the following properties in the request body:
 **Note:**
 
 This API returns a different response for users with the [Guest role](https://learning.postman.com/docs/collaborating-in-postman/roles-and-permissions/#team-roles).
+ 
  ---
   - Webhooks
       - POST Create a webhook `https://api.getpostman.com/webhooks`
@@ -1366,6 +1488,7 @@ Include the following properties in a `webhook` object in the request body:
 
 *   `name` — The webhook's name. On success, the system creates a new monitor with this name in the **Monitors** tab.
 *   `collection` — The collection UID to trigger when calling this webhook.
+ 
  ---
   - SCIM 2.0 - Identity
       - User Provisioning
@@ -1373,6 +1496,7 @@ Include the following properties in a `webhook` object in the request body:
 
           
   *Description*: Gets information about a Postman team member.
+ 
  ---
           - PUT Update a user `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
@@ -1382,6 +1506,7 @@ Include the following properties in a `webhook` object in the request body:
 **Note:**
 
 This endpoint only updates a user's first and last name and pushes it to Postman. You cannot update any other user attributes with the SCIM API.
+ 
  ---
           - POST Create a user `https://api.getpostman.com/scim/v2/Users`
 
@@ -1391,11 +1516,13 @@ This endpoint only updates a user's first and last name and pushes it to Postman
 If the account already exists, the system sends the user an [email invite](https://learning.postman.com/docs/administration/managing-your-team/managing-your-team/#inviting-users) to join the Postman team. The user joins the team once they accept the invite.
 
 By default, the system assigns new users the developer role. You can [update user roles in Postman](https://learning.postman.com/docs/administration/managing-your-team/managing-your-team/#managing-team-roles).
+ 
  ---
           - GET Get all user resources `https://api.getpostman.com/scim/v2/Users`
 
           
   *Description*: Gets information about all Postman team members.
+ 
  ---
           - PATCH Update a user's state `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
@@ -1409,12 +1536,14 @@ By default, the system assigns new users the developer role. You can [update use
 ### Reactivating users
 
 By setting the `active` property from `false` to `true`, this reactivates an account. This allows the account to authenticate in to Postman and adds the account back on to your Postman team.
+ 
  ---
       - Group Provisioning
           - GET Get all group resources `https://api.getpostman.com/scim/v2/Groups`
 
           
   *Description*: Gets all Postman groups within the team.
+ 
  ---
           - PATCH Update a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
@@ -1435,11 +1564,13 @@ Include the following properties in the request body:
     - `value` — An **object** that contains the following properties:
         - `id` — The group's ID.
         - `displayName` — The group's display name.
+ 
  ---
           - GET Get a group resource `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
           
   *Description*: Gets information about a Postman group within the team.
+ 
  ---
           - POST Create a group `https://api.getpostman.com/scim/v2/Groups`
 
@@ -1449,6 +1580,7 @@ Include the following properties in the request body:
 Each account is added to your Postman team and authentication is activated for each user. If an existing Postman account uses an email that matches a group member's email ID, an [email invite](https://postman.postman.co/docs/administration/managing-your-team/managing-your-team/#invites) to join your Postman team is sent to that user. Once the user accepts the invite, they'll be added to your team.
 
 By default, the system assigns new users the developer role. You can [update user roles in Postman](https://learning.postman.com/docs/administration/managing-your-team/managing-your-team/#managing-team-roles).
+ 
  ---
           - DELETE Delete a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
@@ -1458,16 +1590,19 @@ By default, the system assigns new users the developer role. You can [update use
 User accounts that were in the deleted group are deactivated in Postman if the app is assigned to the user only with the deleted group.
 
 User accounts and the data corresponding to them are **not** deleted. To permanently delete user accounts and their data, [contact Postman support](https://www.postman.com/support/).
+ 
  ---
       - GET Get resource types `https://api.getpostman.com/scim/v2/ResourceTypes`
 
       
   *Description*: Gets all the resource types supported by Postman's SCIM API.
+ 
  ---
       - GET Get service provider configuration `https://api.getpostman.com/scim/v2/ServiceProviderConfig`
 
       
   *Description*: Gets the Postman SCIM API configuration information. This includes a list of supported operations.
+ 
  ---
   - API Security
       - POST API definition security validation `https://api.getpostman.com/security/api-validation`
@@ -1492,10 +1627,12 @@ Include the following properties in the request body:
 
 - The maximum allowed size of the definition is 10 MB.
 - You must [import and enable](https://learning.postman.com/docs/api-governance/configurable-rules/configuring-api-security-rules/) [OWASP security rules](https://postman.postman.co/api-governance/libraries/postman_owasp/view) in Postman for this endpoint to return any security rule violations.
+ 
  ---
   - Audit Logs
       - GET Get team audit logs `https://api.getpostman.com/audit/logs`
 
       
   *Description*: Gets a list of your team's generated audit events. For a complete list of all audit events, read our [Utilizing audit logs](https://learning.postman.com/docs/administration/audit-logs/) documentation.
+ 
  ---
