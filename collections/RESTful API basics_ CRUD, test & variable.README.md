@@ -10,8 +10,8 @@ A successful GET response will have a `200 OK` status, and should include some k
   - POST Post data `{{base_url}}/info`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"name": "Add your name in the body"
 }
@@ -26,11 +26,8 @@ A successful POST request typically returns a `200 OK` or `201 Created` response
 
   
   *Body*:
-  ```raw
-{
-	"name": "Add your name in the body"
-}
-  ```
+  
+    - name: Add your name in urlencode (text)
   
   *Description*: This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).
 
@@ -41,9 +38,8 @@ A successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No
 
   
   *Body*:
-  ```raw
-
-  ```
+  
+    - name: Add your name in form-data (text)
   
   *Description*: This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).
 

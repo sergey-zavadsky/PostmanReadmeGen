@@ -5,8 +5,8 @@
   - POST Create a schema `https://api.getpostman.com/apis/{{apiId}}/schemas`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "type": "{{schemaType}}",
     "files": [
@@ -53,8 +53,8 @@
   - PUT Create or update a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "content": "{{fileContent}}"
 }
@@ -119,8 +119,8 @@ The `versionId` query parameter is a **required** parameter for API viewers.
   - POST Create a version `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{apiReleaseName}}",
     "releaseNotes": "{{apiReleaseDescription}}",
@@ -174,8 +174,8 @@ You can include the following optional properties:
   - PUT Update a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{apiVersionName}}",
     "releaseNotes": "{{releaseNotes}}"
@@ -217,8 +217,8 @@ The `versionId` query parameter is a **required** parameter for API viewers.
   - POST Add a collection `https://api.getpostman.com/apis/{{apiId}}/collections`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "operationType": "{{operationType}}"
 }
@@ -256,8 +256,8 @@ This endpoint only supports the OpenAPI 3 schema type.
   - PUT Update an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "tags": [
         {
@@ -279,8 +279,8 @@ This endpoint only supports the OpenAPI 3 schema type.
   - POST Create an API `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{apiName}}",
     "summary": "{{apiSummary}}",
@@ -302,8 +302,8 @@ You can include the following optional properties:
   - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{apiName}}",
     "summary": "{{apiSummary}}",
@@ -366,8 +366,8 @@ When you create an API, the system creates a single, default API version. You ca
   - POST Create an API version `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"version": {
 		"name": "{{apiVersionName}}",
@@ -415,8 +415,8 @@ When you create an API, the system creates a single, default API version. You ca
   - PUT Update an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"version": {
 		"name": "{{apiVersionName}}"
@@ -522,8 +522,8 @@ Gets an API version's environment relations.
   - POST Create relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "{{relationType}}": [
         "{{entityId}}"
@@ -569,8 +569,8 @@ Gets information about an API's definition.
   - POST Create a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"schema": {
 		"language": "{{apiDefinitionLanguage}}",
@@ -608,8 +608,8 @@ Creates an API definition. The request body must contain a `schema` object with 
   - POST Create a collection from a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}/collections`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"name": "{{collectionName}}",
 	"relations": [
@@ -645,8 +645,8 @@ You can also include the following additional properties in the request body:
   - PUT Update a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"schema": {
 		"language": "{{apiDefinitionLanguage}}",
@@ -701,8 +701,8 @@ Gets information about all of an API version's releases.
   - POST Create an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "release": {
         "name": "{{apiReleaseName}}",
@@ -733,8 +733,8 @@ You can include the following optional properties:
   - PATCH Update an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "release": {
         "name": "{{apiReleaseName}}",
@@ -776,8 +776,8 @@ Deletes an API version's release.
   - POST Create an API `https://api.getpostman.com/apis`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "api": {
         "name": "{{apiName}}",
@@ -807,8 +807,8 @@ You can include the following optional properties:
   - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"api": {
 		"name": "{{apiName}}",
@@ -843,8 +843,8 @@ You can include the following optional properties:
   - POST Create a folder `https://api.getpostman.com/collections/{{collectionId}}/folders`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{folderName}}"
 }
@@ -862,8 +862,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - PUT Update a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{folderName}}",
     "description": "{{folderDescription}}"
@@ -893,8 +893,8 @@ This endpoint acts like a PATCH method. It only updates the values that you pass
   - POST Create a request `https://api.getpostman.com/collections/{{collectionId}}/requests`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{requestName}}"
 }
@@ -910,8 +910,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - PUT Update a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{requestName}}",
     "method": "{{requestMethod}}"
@@ -943,8 +943,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - POST Create a response `https://api.getpostman.com/collections/{{collectionId}}/responses?request={{requestId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{responseName}}"
 }
@@ -960,8 +960,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - PUT Update a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "name": "{{responseName}}",
     "responseCode": {
@@ -995,8 +995,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - PUT Update a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "tags": [
         {
@@ -1020,8 +1020,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - POST Create a fork `https://api.getpostman.com/collections/fork/{{collectionId}}?workspace={{workspaceId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"label": "{{collectionForkName}}"
 }
@@ -1035,8 +1035,8 @@ It is recommended that you pass the `name` property in the request body. If you 
   - POST Merge a fork `https://api.getpostman.com/collections/merge`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "strategy": "{{mergeStrategy}}",
     "source": "{{forkCollectionId}}",
@@ -1071,8 +1071,8 @@ This does **not** create an API.
   - POST Create a collection `https://api.getpostman.com/collections`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "collection": {
         "info": {
@@ -1121,8 +1121,8 @@ For more information about the Collection Format, see the [Postman Collection Fo
   - PUT Replace a collection's data `https://api.getpostman.com/collections/{{collectionId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "collection": {
         "info": {
@@ -1164,8 +1164,8 @@ To copy another collection's contents to the given collection, **remove** all ID
   - PATCH Update part of a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "collection": {
         "info": {
@@ -1217,8 +1217,8 @@ For more information about the Collection Format, see the [Postman Collection Fo
   - POST Create an environment `https://api.getpostman.com/environments`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "environment": {
         "name": "{{environmentName}}",
@@ -1250,8 +1250,8 @@ You can also include the following properties:
   - PUT Update an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "environment": {
         "name": "{{environmentName}}",
@@ -1290,8 +1290,8 @@ You can also include the following optional properties:
   - POST Import an OpenAPI definition `https://api.getpostman.com/import/openapi`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "type": "{{APIspecificationType}}",
     "input": {{APIspecification}},
@@ -1330,9 +1330,10 @@ If you import with the `file` input method, you **must** use the Postman desktop
 
   
   *Body*:
-  ```formdata
-undefined
-  ```
+  
+    - type: file (text)
+  
+    - input: undefined (file)
   
   *Description*: Imports exported Postman data. This endpoint **only** accepts [export data dump files](https://postman.postman.co/me/export).
 
@@ -1369,8 +1370,8 @@ Call logs contain exchanged request and response data made to mock servers. The 
   - POST Create a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "serverResponse": {
         "name": "{{serverStubName}}",
@@ -1413,8 +1414,8 @@ You can also include the following optional properties:
   - PUT Update a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "serverResponse": {
         "name": "{{serverStubName}}",
@@ -1455,8 +1456,8 @@ You can also include the following optional properties:
   - POST Create a mock server `https://api.getpostman.com/mocks`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"mock": {
         "name": "{{mockName}}",
@@ -1512,8 +1513,8 @@ If you pass both the `teamId` and `workspace` query parameters, this endpoint on
   - PUT Update a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "mock": {
         "name": "{{mockName}}",
@@ -1541,8 +1542,8 @@ If you pass both the `teamId` and `workspace` query parameters, this endpoint on
   - POST Create a monitor `https://api.getpostman.com/monitors`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
   "monitor": {
     "name": "{{monitorName}}",
@@ -1608,8 +1609,8 @@ Creates a monitor. Include the following properties in the request body:
   - PUT Update a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
 	"monitor": {
 		"name": "{{monitorName}}",
@@ -1646,8 +1647,8 @@ Creates a monitor. Include the following properties in the request body:
   - PUT Respond to an element add request `https://api.getpostman.com/network/private/network-entity/request/:id`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "response": {
         "message": {{responderMessage}}
@@ -1683,8 +1684,8 @@ The `limit` and `offset` parameters are separately applied to elements and folde
   - POST Add an element or folder `https://api.getpostman.com/network/private`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "{{elementType}}": {
         "id": "{{elementId}}",
@@ -1728,8 +1729,8 @@ In the `elementType` object, include the following values:
   - PUT Update an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "{{elementType}}": {
         "parentFolderId": {{parentFolderId}}
@@ -1788,8 +1789,8 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
   - PUT Update a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "tags": [
         {
@@ -1820,8 +1821,8 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
   - PUT Update global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
   "values": [
     {
@@ -1845,8 +1846,8 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
   - PUT Update a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "workspace": {
         "name": "{{workspaceName}}",
@@ -1881,8 +1882,8 @@ If you have a linked collection or environment, note the following:
   - POST Create a workspace `https://api.getpostman.com/workspaces`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "workspace": {
         "name": "{{workspaceName}}",
@@ -1984,8 +1985,8 @@ Tagging is available on [Postman Enterprise plans](https://www.postman.com/prici
   - PUT Update detected secret resolution status `https://api.getpostman.com/detected-secrets/{{secretId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "resolution": "{{secretResolutionStatus}}",
     "workspaceId": "{{workspaceId}}"
@@ -2016,8 +2017,8 @@ Include the following in the request body:
   - POST Search detected secrets `https://api.getpostman.com/detected-secrets-queries`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "secretTypes": [
         "{{secretTypeIds}}"
@@ -2071,8 +2072,8 @@ This API returns a different response for users with the [Guest role](https://le
   - POST Create a webhook `https://api.getpostman.com/webhooks`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "webhook":{
         "name": "{{webhookName}}",
@@ -2100,8 +2101,8 @@ Include the following properties in a `webhook` object in the request body:
   - PUT Update a user `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User"
@@ -2130,8 +2131,8 @@ This endpoint only updates a user's first and last name and pushes it to Postman
   - POST Create a user `https://api.getpostman.com/scim/v2/Users`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User"
@@ -2165,8 +2166,8 @@ By default, the system assigns new users the developer role. You can [update use
   - PATCH Update a user's state `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schemas": [
         "urn:ietf:params:scim:api:messages:2.0:PatchOp"
@@ -2203,8 +2204,8 @@ By setting the `active` property from `false` to `true`, this reactivates an acc
   - PATCH Update a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schemas": [
         "urn:ietf:params:scim:api:messages:2.0:PutOp"
@@ -2248,8 +2249,8 @@ Include the following properties in the request body:
   - POST Create a group `https://api.getpostman.com/scim/v2/Groups`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
     "displayName": {{ userGroup }},
@@ -2290,8 +2291,8 @@ User accounts and the data corresponding to them are **not** deleted. To permane
   - POST API definition security validation `https://api.getpostman.com/security/api-validation`
 
   
-  *Body*:
-  ```raw
+  *Body* (JSON):
+  ```json
 {
     "schema": {
         "type": "{{schemaType}}",

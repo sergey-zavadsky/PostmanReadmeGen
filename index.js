@@ -1,4 +1,4 @@
-import { writeFileSync, existsSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { promises as fsPromises } from 'fs';
 import { dirname } from 'path';
 
@@ -49,7 +49,24 @@ function generateMarkdown(data, dir) {
 			let markdown = `${indentation}- ${itemName}\n`;
 
 			if (request && request.body) {
-				markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
+				if (
+					request.body.mode === 'urlencoded' ||
+					request.body.mode === 'formdata'
+				) {
+					const bodyMode = request.body.mode;
+					const bodyData = request.body[bodyMode];
+					markdown += `${indentation}\n  *Body*:\n`;
+					bodyData.forEach((item) => {
+						const { key, value, type } = item;
+						markdown += `${indentation}\n    - ${key}: ${value} (${type})\n`;
+					});
+				} else if (request.body.mode === 'raw' && request.body.raw) {
+					markdown += `${indentation}\n  *Body* (JSON):\n  \`\`\`json\n${request.body.raw}\n  \`\`\`\n`;
+				} else {
+					markdown += `${indentation}\n  *Body*:\n  \`\`\`${
+						request.body.options?.raw.language || request.body.mode
+					}\n${request.body.raw}\n  \`\`\`\n`;
+				}
 			}
 
 			if (request && request.description) {
