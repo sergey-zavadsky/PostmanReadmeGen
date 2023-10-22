@@ -29,8 +29,13 @@ async function readJsonData(pathToJson) {
 }
 
 function generateMarkdown(data, dir) {
+	const commonData = {
+		indentation: '  ',
+		separator: ' \n ---',
+	};
+
 	function generateMarkdownTree(data, depth = 0) {
-		const indentation = '  '.repeat(depth);
+		const { indentation, separator } = commonData;
 
 		if (Array.isArray(data)) {
 			return data
@@ -43,8 +48,12 @@ function generateMarkdown(data, dir) {
 				: name;
 			let markdown = `${indentation}- ${itemName}\n`;
 
+			if (request && request.body) {
+				markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
+			}
+
 			if (request && request.description) {
-				markdown += `${indentation}\n  Description: ${request.description}\n`;
+				markdown += `${indentation}\n  *Description*: ${request.description}\n${separator}`;
 			}
 
 			if (item && item.length > 0) {
