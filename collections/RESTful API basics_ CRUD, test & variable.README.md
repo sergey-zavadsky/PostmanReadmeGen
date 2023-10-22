@@ -1,7 +1,7 @@
 ### RESTful API basics: CRUD, test & variable
+   - GET Get data `{{base_url}}/info?id=1`
 
-- GET Get data `{{base_url}}/info?id=1`
-
+  
 <details>
 <summary>Description</summary>
 
@@ -14,14 +14,14 @@ A successful GET response will have a `200 OK` status, and should include some k
  ---
   - POST Post data `{{base_url}}/info`
 
-_Body_ (JSON):
-
-```json
+  
+  *Body* (JSON):
+  ```json
 {
 	"name": "Add your name in the body"
 }
-```
-
+  ```
+  
 <details>
 <summary>Description</summary>
 
@@ -34,10 +34,11 @@ A successful POST request typically returns a `200 OK` or `201 Created` response
  ---
   - PUT Update data `{{base_url}}/info?id=1`
 
-_Body_:
-
+  
+  *Body*:
+  
     - name: Add your name in urlencode (text)
-
+  
 <details>
 <summary>Description</summary>
 
@@ -50,10 +51,11 @@ A successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No
  ---
   - DELETE Delete data `{{base_url}}/info?id=1`
 
-_Body_:
-
+  
+  *Body*:
+  
     - name: Add your name in form-data (text)
-
+  
 <details>
 <summary>Description</summary>
 
