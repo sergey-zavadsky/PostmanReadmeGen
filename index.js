@@ -81,5 +81,3 @@ function generateMarkdown(data, dir) {
 }
 
 main();
-
-main();
