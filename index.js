@@ -44,7 +44,7 @@ function generateMarkdown(data, dir) {
 			let markdown = `${indentation}- ${itemName}\n`;
 
 			if (request && request.description) {
-				markdown += `${indentation}\n  Description: ${request.description}\n`;
+				markdown += `${indentation}\n  *Description*: ${request.description}\n ---`;
 			}
 
 			if (item && item.length > 0) {
