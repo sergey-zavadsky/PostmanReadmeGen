@@ -1,4 +1,4 @@
-import { writeFileSync, existsSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { promises as fsPromises } from 'fs';
 import { dirname } from 'path';
 
@@ -49,11 +49,31 @@ function generateMarkdown(data, dir) {
 			let markdown = `${indentation}- ${itemName}\n`;
 
 			if (request && request.body) {
-				markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
+				if (
+					request.body.mode === 'urlencoded' ||
+					request.body.mode === 'formdata'
+				) {
+					const bodyMode = request.body.mode;
+					const bodyData = request.body[bodyMode];
+					markdown += `${indentation}\n  *Body*:\n`;
+					bodyData.forEach((item) => {
+						const { key, value, type } = item;
+						markdown += `${indentation}\n    - ${key}: ${value} (${type})\n`;
+					});
+				} else if (request.body.mode === 'raw' && request.body.raw) {
+					const xmlString = 'xmlns';
+					if (request.body.raw.includes(xmlString)) {
+						markdown += `${indentation}\n  *Body*:\n  \`\`\`xml\n${request.body.raw}\n  \`\`\`\n`;
+					} else {
+						markdown += `${indentation}\n  *Body*:\n  \`\`\`json\n${request.body.raw}\n  \`\`\`\n`;
+					}
+				} else {
+					markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
+				}
 			}
 
 			if (request && request.description) {
-				markdown += `${indentation}\n  *Description*: ${request.description}\n${separator}`;
+				markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n${separator}`;
 			}
 
 			if (item && item.length > 0) {
@@ -65,7 +85,7 @@ function generateMarkdown(data, dir) {
 		return '';
 	}
 
-	const markdownTree = `# ${data?.info?.name}\n ${generateMarkdownTree(
+	const markdownTree = `### ${data?.info?.name}\n ${generateMarkdownTree(
 		data.item,
 	)}`;
 
