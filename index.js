@@ -70,7 +70,7 @@ function generateMarkdown(data, dir) {
 			}
 
 			if (request && request.description) {
-				markdown += `${indentation}\n  *Description*: ${request.description}\n${separator}`;
+				markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n${separator}`;
 			}
 
 			if (item && item.length > 0) {
@@ -82,7 +82,7 @@ function generateMarkdown(data, dir) {
 		return '';
 	}
 
-	const markdownTree = `# ${data?.info?.name}\n ${generateMarkdownTree(
+	const markdownTree = `### ${data?.info?.name}\n ${generateMarkdownTree(
 		data.item,
 	)}`;
 
