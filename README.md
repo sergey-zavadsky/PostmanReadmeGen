@@ -1,4 +1,3 @@
-````markdown
 # PostmanReadmeGen
 
 PostmanReadmeGen is a tool that streamlines the process of integrating Postman collections with GIT, enabling the automatic generation of README files during pre-commits. This tool is designed for those looking to create better-looking documentation for their Postman collections within their GitHub repositories
@@ -15,7 +14,6 @@ To get started, you'll need to install the necessary dependencies. Run the follo
 ```bash
 npm install
 ```
-````
 
 ## Usage
 
