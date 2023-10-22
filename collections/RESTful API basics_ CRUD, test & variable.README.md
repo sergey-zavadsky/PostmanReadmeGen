@@ -15,7 +15,7 @@ A successful GET response will have a `200 OK` status, and should include some k
   - POST Post data `{{base_url}}/info`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
 	"name": "Add your name in the body"

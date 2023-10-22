@@ -27,7 +27,7 @@ Operation to check the working condition of our API
   - POST Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -67,7 +67,7 @@ In 'examples' you can find different cases of requests and responses.
   - POST Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -103,7 +103,7 @@ In 'examples' you can find different cases of requests and responses.
   - POST Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -147,7 +147,7 @@ Availability filtering by room type.
   - POST Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -192,7 +192,7 @@ Availability filtering by keyword.
   - POST Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -234,7 +234,7 @@ Availability filtering by accommodation type.
   - POST Filter by board code  `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -279,7 +279,7 @@ Availability filtering by board code.
   - POST Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -327,7 +327,7 @@ In 'examples' you can find different cases of requests and responses.
   - POST Other filters `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -383,7 +383,7 @@ Other filters available in the request:
   - POST Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "stay": {
@@ -424,8 +424,8 @@ In 'examples' you can find different cases of requests and responses.
   - POST Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -456,8 +456,8 @@ In 'examples' you can find different cases of requests and responses.
   - POST Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -480,8 +480,8 @@ In 'examples' you can find different cases of requests and responses.
   - POST Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -513,8 +513,8 @@ Availability filtering by room type.
   - POST Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -548,8 +548,8 @@ Availability filtering by keyword.
   - POST Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>	
 	<occupancies>
@@ -583,8 +583,8 @@ Availability filtering by accommodation type.
   - POST Filter by board code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -617,8 +617,8 @@ Availability filtering by board code.
   - POST Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -652,8 +652,8 @@ In 'examples' you can find different cases of requests and responses.
   - POST Other filters `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -699,8 +699,8 @@ Other filters available in the request:
   - POST Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <availabilityRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stay checkIn="2020-06-15" checkOut="2020-06-16"/>
 	<occupancies>
@@ -732,7 +732,7 @@ In 'examples' you can find different cases of requests and responses.
   - POST CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "rooms": [
@@ -755,8 +755,8 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
   - POST CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <checkRateRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<rooms>
 		<room rateKey="20190315|20190316|W|1|311|DBT.ST|PVP-SHORTSTAY|AI||1~2~0||N@08870BAE87754721542353710729AAES00000010000000007221346"/>
@@ -777,7 +777,7 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
   - POST Booking `{{endpoint}}/hotel-api/1.0/bookings`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "holder": {
@@ -820,7 +820,7 @@ Standard Booking operation. In 'examples' you can find different cases of reques
   - POST Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "holder": {
@@ -876,7 +876,7 @@ AT_HOTEL booking example
   - POST Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "holder": {
@@ -946,8 +946,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
   - POST Booking `{{endpoint}}/hotel-api/1.2/bookings`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <bookingRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <holder name="HolderFirstName" surname="HolderLastName"/>
     <clientReference>IntegrationAgency</clientReference>
@@ -974,8 +974,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
   - POST Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <bookingRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<holder name="HolderFirstName" surname="HolderLastName"/>
 	<clientReference>IntegrationAgency</clientReference>
@@ -1016,8 +1016,8 @@ AT_HOTEL booking example
   - POST Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <bookingRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<holder name="HolderFirstName" surname="HolderLastName"/>
 	<clientReference>IntegrationAgency</clientReference>
@@ -1104,7 +1104,7 @@ The BookingCancellation operation cancels a booking or simulates a booking cance
   - PUT BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
-  *Body* (JSON):
+  *Body*:
   ```json
 {
     "mode": "SIMULATION",
@@ -1250,8 +1250,8 @@ The BookingCancellation operation cancels a booking or simulates a booking cance
   - PUT BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
-  *Body* (JSON):
-  ```json
+  *Body*:
+  ```xml
 <bookingChangeRQ xmlns="http://www.hotelbeds.com/schemas/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <mode>SIMULATION</mode>
     <booking reference="52-1274418" clientReference="INTEGRATIONAGENCY" creationDate="2017-08-31" status="CONFIRMED" creationUser="wuupfvswdqfz342cejxfv3ku" totalNet="302.26" pendingAmount="302.26" currency="EUR">

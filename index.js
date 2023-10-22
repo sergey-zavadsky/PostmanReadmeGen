@@ -61,11 +61,14 @@ function generateMarkdown(data, dir) {
 						markdown += `${indentation}\n    - ${key}: ${value} (${type})\n`;
 					});
 				} else if (request.body.mode === 'raw' && request.body.raw) {
-					markdown += `${indentation}\n  *Body* (JSON):\n  \`\`\`json\n${request.body.raw}\n  \`\`\`\n`;
+					const xmlString = 'xmlns';
+					if (request.body.raw.includes(xmlString)) {
+						markdown += `${indentation}\n  *Body*:\n  \`\`\`xml\n${request.body.raw}\n  \`\`\`\n`;
+					} else {
+						markdown += `${indentation}\n  *Body*:\n  \`\`\`json\n${request.body.raw}\n  \`\`\`\n`;
+					}
 				} else {
-					markdown += `${indentation}\n  *Body*:\n  \`\`\`${
-						request.body.options?.raw.language || request.body.mode
-					}\n${request.body.raw}\n  \`\`\`\n`;
+					markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
 				}
 			}
 
