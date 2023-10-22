@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"force": "sh .husky/pre-commit",
-		"prepare": "npx husky install && npx husky add .husky/pre-commit",
+		"prepare": "npx husky install",
 		"test": "node script.js",
 		"deploy": "npm publish"
 	},
@@ -18,7 +18,11 @@
 		}
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/@siarhei.zavadski"
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sergey-zavadsky/PostmanReadmeGen.git"
 	},
 	"devDependencies": {
 		"husky": "^8.0.0"
