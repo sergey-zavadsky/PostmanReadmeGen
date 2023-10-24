@@ -1,5 +1,5 @@
 ### RESTful API basics: CRUD, test & variable
-   - GET Get data `{{base_url}}/info?id=1`
+   - ![GET](https://img.shields.io/badge/GET-green) Get data `{{base_url}}/info?id=1`
 
   
 <details>
@@ -10,9 +10,8 @@ This is a GET request and it is used to "get" data from an endpoint. There is no
 A successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data.
 
 </details>
- 
- ---
-  - POST Post data `{{base_url}}/info`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Post data `{{base_url}}/info`
 
   
   *Body*:
@@ -30,9 +29,8 @@ This is a POST request, submitting data to an API via the request body. This req
 A successful POST request typically returns a `200 OK` or `201 Created` response code.
 
 </details>
- 
- ---
-  - PUT Update data `{{base_url}}/info?id=1`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update data `{{base_url}}/info?id=1`
 
   
   *Body*:
@@ -47,9 +45,8 @@ This is a PUT request and it is used to overwrite an existing piece of data. For
 A successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code.
 
 </details>
- 
- ---
-  - DELETE Delete data `{{base_url}}/info?id=1`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete data `{{base_url}}/info?id=1`
 
   
   *Body*:
@@ -64,5 +61,3 @@ This is a DELETE request, and it is used to delete data that was previously crea
 A successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code.
 
 </details>
- 
- ---

@@ -3,6 +3,14 @@ const commonData = {
 	separator: ' \n ---',
 };
 
+const httpMethodColors = {
+	POST: 'POST-yellow',
+	GET: 'GET-green',
+	PUT: 'PUT-blue',
+	DELETE: 'DELETE-red',
+	// Add more HTTP methods and colors as needed
+};
+
 export function generateMarkdownTree(data, depth = 0) {
 	const { indentation, separator } = commonData;
 
@@ -10,8 +18,13 @@ export function generateMarkdownTree(data, depth = 0) {
 		return data.map((item) => generateMarkdownTree(item, depth + 1)).join('\n');
 	} else if (typeof data === 'object') {
 		const { name, item, request } = data;
+		const methodColorBadge = httpMethodColors[request?.method]
+			? `![${request?.method}](https://img.shields.io/badge/${
+					httpMethodColors[request?.method]
+			  })`
+			: '';
 		const itemName = request
-			? `${request.method} ${name} \`${request.url.raw}\`\n`
+			? `${methodColorBadge} ${name} \`${request.url.raw}\`\n`
 			: name;
 		let markdown = `${indentation}- ${itemName}\n`;
 
@@ -40,11 +53,11 @@ export function generateMarkdownTree(data, depth = 0) {
 		}
 
 		if (request && request.description) {
-			markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n${separator}`;
+			markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n`;
 		}
 
 		if (item && item.length > 0) {
-			markdown += generateMarkdownTree(item, depth + 1);
+			markdown += `${generateMarkdownTree(item, depth + 1)}${separator}`;
 		}
 
 		return markdown;

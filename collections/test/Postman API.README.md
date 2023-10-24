@@ -2,7 +2,7 @@
    - API
   - v10
   - Schema
-  - POST Create a schema `https://api.getpostman.com/apis/{{apiId}}/schemas`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a schema `https://api.getpostman.com/apis/{{apiId}}/schemas`
 
   
   *Body*:
@@ -53,9 +53,8 @@ Creates a schema for an API. The request body must contain the following:
     - `content` — A **string** value that contains the schema file's stringified contents.
 
 </details>
- 
- ---
-  - PUT Create or update a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Create or update a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
   
   *Body*:
@@ -80,9 +79,8 @@ Creates or updates an API schema file. The request body must contain the followi
 - If the file path contains a `/` (forward slash) character, then a folder is created. For example, if the file path is the `dir/schema.json` value, then a `dir` folder is created with the `schema.json` file inside.
 
 </details>
- 
- ---
-  - GET Get a schema `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a schema `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}`
 
   
 <details>
@@ -102,9 +100,8 @@ You can use this API to do the following:
 The `versionId` query parameter is a **required** parameter for API viewers.
 
 </details>
- 
- ---
-  - GET Get schema files `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get schema files `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files`
 
   
 <details>
@@ -117,9 +114,8 @@ Gets the files in an API schema. You can use the `versionId` query parameter to 
 The `versionId` query parameter is a **required** parameter for API viewers.
 
 </details>
- 
- ---
-  - GET Get schema file contents `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get schema file contents `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
   
 <details>
@@ -132,9 +128,8 @@ Gets an API schema file contents at the defined path. You can use the `versionId
 The `versionId` query parameter is a **required** parameter for API viewers.
 
 </details>
- 
- ---
-  - DELETE Delete a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a schema file `https://api.getpostman.com/apis/{{apiId}}/schemas/{{schemaId}}/files/{{filePath}}`
 
   
 <details>
@@ -146,7 +141,7 @@ Deletes a file in an API schema.
  
  ---
   - Version
-  - POST Create a version `https://api.getpostman.com/apis/{{apiId}}/versions`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a version `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
   *Body*:
@@ -187,9 +182,8 @@ You can include the following optional properties:
 - `releaseNotes` — A **string** value that contains the Markdown-supported version summary.
 
 </details>
- 
- ---
-  - GET Get all versions `https://api.getpostman.com/apis/{{apiId}}/versions`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all versions `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
 <details>
@@ -198,9 +192,8 @@ You can include the following optional properties:
 Gets all the published versions of an API.
 
 </details>
- 
- ---
-  - GET Get a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
 
   
 <details>
@@ -214,9 +207,8 @@ Gets information about an API version.
 - For API viewers, this endpoint returns an HTTP `404 Not Found` when the version status is pending.
 
 </details>
- 
- ---
-  - PUT Update a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
   *Body*:
@@ -241,9 +233,8 @@ Updates an API version. Include at least one of the following properties in the 
 This endpoint returns an HTTP `404 Not Found` response when an API version is pending publication.
 
 </details>
- 
- ---
-  - DELETE Delete a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a version `https://api.getpostman.com/apis/{{apiId}}/versions/{{versionId}}`
 
   
 <details>
@@ -259,7 +250,7 @@ This endpoint returns an HTTP `404 Not Found` response when an API version is pe
  
  ---
   - Collections
-  - GET Get a collection `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a collection `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}`
 
   
 <details>
@@ -272,9 +263,8 @@ Gets a collection attached to an API. You can use the `versionId` query paramete
 The `versionId` query parameter is a **required** parameter for API viewers.
 
 </details>
- 
- ---
-  - POST Add a collection `https://api.getpostman.com/apis/{{apiId}}/collections`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Add a collection `https://api.getpostman.com/apis/{{apiId}}/collections`
 
   
   *Body*:
@@ -297,9 +287,8 @@ Adds a collection to an API. To do this, use the following `operationType` value
 For examples of each method, see the collection's response examples.
 
 </details>
- 
- ---
-  - PUT Sync collection with schema `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}/sync-with-schema-tasks`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Sync collection with schema `https://api.getpostman.com/apis/{{apiId}}/collections/{{collectionId}}/sync-with-schema-tasks`
 
   
 <details>
@@ -317,7 +306,7 @@ This endpoint only supports the OpenAPI 3 schema type.
  
  ---
   - Tags
-  - GET Get an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
+  - ![GET](https://img.shields.io/badge/GET-green) Get an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
 
   
 <details>
@@ -326,9 +315,8 @@ This endpoint only supports the OpenAPI 3 schema type.
 Gets all the tags associated with an API.
 
 </details>
- 
- ---
-  - PUT Update an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an API's tags `https://api.getpostman.com/apis/{{apiUid}}/tags`
 
   
   *Body*:
@@ -356,7 +344,7 @@ Gets all the tags associated with an API. This endpoint replaces all existing ta
 </details>
  
  ---
-  - POST Create an API `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create an API `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
 
   
   *Body*:
@@ -382,9 +370,8 @@ You can include the following optional properties:
 - `description` — A **string** value that contains the description of the API.
 
 </details>
- 
- ---
-  - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
   *Body*:
@@ -406,9 +393,8 @@ Updates an API. Include at least one of the following properties in the request 
 - `description` — A **string** value that contains the description of the API. This supports Markdown formatting.
 
 </details>
- 
- ---
-  - GET Get all APIs `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all APIs `https://api.getpostman.com/apis?workspaceId={{workspaceId}}`
 
   
 <details>
@@ -421,9 +407,8 @@ Gets information about all APIs in a workspace.
 This endpoint only returns APIs created or migrated in Postman v10 and higher.
 
 </details>
- 
- ---
-  - GET Get an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
 <details>
@@ -437,9 +422,8 @@ Gets information about an API.
 - API viewers can only use the `versions` option in the `include` query parameter.
 
 </details>
- 
- ---
-  - DELETE Delete an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
 <details>
@@ -448,9 +432,8 @@ Gets information about an API.
 Deletes an API.
 
 </details>
- 
- ---
-  - GET Get status of an asynchronous task `https://api.getpostman.com/apis/{{apiId}}/tasks/{{taskId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get status of an asynchronous task `https://api.getpostman.com/apis/{{apiId}}/tasks/{{taskId}}`
 
   
 <details>
@@ -463,7 +446,7 @@ Gets the status of an asynchronous task.
  ---
   - v9
   - API Version
-  - GET Get all API versions `https://api.getpostman.com/apis/{{apiId}}/versions`
+  - ![GET](https://img.shields.io/badge/GET-green) Get all API versions `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
 <details>
@@ -476,9 +459,8 @@ Gets information about an API's versions.
 When you create an API, the system creates a single, default API version. You can use this version’s ID with any endpoints that require an API version ID.
 
 </details>
- 
- ---
-  - POST Create an API version `https://api.getpostman.com/apis/{{apiId}}/versions`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create an API version `https://api.getpostman.com/apis/{{apiId}}/versions`
 
   
   *Body*:
@@ -520,9 +502,8 @@ Creates a new API version. Include the following request body properties in the 
         - `environment`
 
 </details>
- 
- ---
-  - GET Get an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
 <details>
@@ -535,9 +516,8 @@ Gets information about an API version.
 When you create an API, the system creates a single, default API version. You can use this version’s ID with any endpoints that require an API version ID.
 
 </details>
- 
- ---
-  - PUT Update an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
   *Body*:
@@ -559,9 +539,8 @@ Updates an API version. Include the following request body properties in the `ve
 - `name` — A **string** that contains the API version's name.
 
 </details>
- 
- ---
-  - DELETE Delete an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete an API version `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}`
 
   
 <details>
@@ -575,7 +554,7 @@ Deletes an API version.
  
  ---
   - Relations
-  - GET Get unclassified relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/unclassified`
+  - ![GET](https://img.shields.io/badge/GET-green) Get unclassified relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/unclassified`
 
   
 <details>
@@ -588,9 +567,8 @@ Gets all of an API version's unclassified relations.
 Unclassified relations are used for documentation and testing. This is the default relation type.
 
 </details>
- 
- ---
-  - GET Get monitor relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/monitor`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get monitor relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/monitor`
 
   
 <details>
@@ -601,9 +579,8 @@ Unclassified relations are used for documentation and testing. This is the defau
 Gets an API version's monitor relations.
 
 </details>
- 
- ---
-  - GET Get  documentation relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/documentation`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get  documentation relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/documentation`
 
   
 <details>
@@ -614,9 +591,8 @@ Gets an API version's monitor relations.
 Gets an API version's documentation relations.
 
 </details>
- 
- ---
-  - GET Get integration test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/integrationtest`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get integration test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/integrationtest`
 
   
 <details>
@@ -625,9 +601,8 @@ Gets an API version's documentation relations.
 **This endpoint is deprecated.**
 
 </details>
- 
- ---
-  - GET Get test suite relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/testsuite`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get test suite relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/testsuite`
 
   
 <details>
@@ -636,9 +611,8 @@ Gets an API version's documentation relations.
 **This endpoint is deprecated.**
 
 </details>
- 
- ---
-  - GET Get all linked relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all linked relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
 
   
 <details>
@@ -654,9 +628,8 @@ In Postman v10 and higher, this endpoint returns the following:
 - The `apiDefinition` relation is the relation used for API definitions.
 
 </details>
- 
- ---
-  - GET Get all test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/test`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/test`
 
   
 <details>
@@ -667,9 +640,8 @@ In Postman v10 and higher, this endpoint returns the following:
 Gets all of an API version's test relations.
 
 </details>
- 
- ---
-  - PUT Sync API relations with definition `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/:relationType/:entityId/syncWithSchema`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Sync API relations with definition `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/:relationType/:entityId/syncWithSchema`
 
   
 <details>
@@ -678,9 +650,8 @@ Gets all of an API version's test relations.
 Syncs an API version's relation with the API's definition.
 
 </details>
- 
- ---
-  - GET Get environment relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/environment`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get environment relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/environment`
 
   
 <details>
@@ -691,9 +662,8 @@ Syncs an API version's relation with the API's definition.
 Gets an API version's environment relations.
 
 </details>
- 
- ---
-  - GET Get contract test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/contracttest`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get contract test relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/contracttest`
 
   
 <details>
@@ -702,9 +672,8 @@ Gets an API version's environment relations.
 **This endpoint is deprecated.**
 
 </details>
- 
- ---
-  - POST Create relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create relations `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/relations`
 
   
   *Body*:
@@ -748,7 +717,7 @@ The `documentation` and `test` values returned in the response are the relation 
  
  ---
   - Schema
-  - GET Get a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
 
   
 <details>
@@ -759,9 +728,8 @@ The `documentation` and `test` values returned in the response are the relation 
 Gets information about an API's definition.
 
 </details>
- 
- ---
-  - POST Create a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas`
 
   
   *Body*:
@@ -803,9 +771,8 @@ Creates an API definition. The request body must contain a `schema` object with 
 - `schema` — A **string** value that contains the API definition's contents.
 
 </details>
- 
- ---
-  - POST Create a collection from a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}/collections`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a collection from a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}/collections`
 
   
   *Body*:
@@ -845,9 +812,8 @@ You can also include the following additional properties in the request body:
 - `options` — An **object** that contains advanced creation options and their values. You can find a complete list of properties and their values in Postman's [OpenAPI 3.0 to Postman Collection v2.1.0 Converter OPTIONS documentation](https://github.com/postmanlabs/openapi-to-postman/blob/develop/OPTIONS.md). **These properties are case-sensitive.**
 
 </details>
- 
- ---
-  - PUT Update a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a schema `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/schemas/{{schemaId}}`
 
   
   *Body*:
@@ -892,7 +858,7 @@ Updates an API definition. The request body must contain a `schema` object with 
  
  ---
   - Release
-  - GET Get an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
   
 <details>
@@ -903,9 +869,8 @@ Updates an API definition. The request body must contain a `schema` object with 
 Gets information about an API version's release.
 
 </details>
- 
- ---
-  - GET Get all API releases `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all API releases `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
 
   
 <details>
@@ -916,9 +881,8 @@ Gets information about an API version's release.
 Gets information about all of an API version's releases.
 
 </details>
- 
- ---
-  - POST Create an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases`
 
   
   *Body*:
@@ -953,9 +917,8 @@ You can include the following optional properties:
 - `gitTag` — A **string** value that contains a valid [Git tag](https://docs.github.com/en/rest/git/tags) ID. The tag must exist in the API's connected Git repository.
 
 </details>
- 
- ---
-  - PATCH Update an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
+
+  -  Update an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
   
   *Body*:
@@ -987,9 +950,8 @@ Updates an API version's release. Include at least one of the following properti
 - `gitTag` — A **string** value that contains a valid [Git tag](https://docs.github.com/en/rest/git/tags) ID. The tag must exist in the API's connected Git repository.
 
 </details>
- 
- ---
-  - DELETE Delete an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete an API release `https://api.getpostman.com/apis/{{apiId}}/versions/{{apiVersionId}}/releases/{{apiReleaseId}}`
 
   
 <details>
@@ -1002,7 +964,7 @@ Deletes an API version's release.
 </details>
  
  ---
-  - GET Get all APIs `https://api.getpostman.com/apis`
+  - ![GET](https://img.shields.io/badge/GET-green) Get all APIs `https://api.getpostman.com/apis`
 
   
 <details>
@@ -1011,9 +973,8 @@ Deletes an API version's release.
 Gets information about all APIs.
 
 </details>
- 
- ---
-  - POST Create an API `https://api.getpostman.com/apis`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create an API `https://api.getpostman.com/apis`
 
   
   *Body*:
@@ -1041,9 +1002,8 @@ You can include the following optional properties:
 *   `description` — A **string** value that contains the description of the API.
 
 </details>
- 
- ---
-  - GET Get an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
 <details>
@@ -1052,9 +1012,8 @@ You can include the following optional properties:
 Gets information about an API.
 
 </details>
- 
- ---
-  - PUT Update an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
   *Body*:
@@ -1078,9 +1037,8 @@ Updates an API. Include at least one of the following properties in the `api` ob
 *   `description` — A **string** value that contains the description of the API.
 
 </details>
- 
- ---
-  - DELETE Delete an API `https://api.getpostman.com/apis/{{apiId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete an API `https://api.getpostman.com/apis/{{apiId}}`
 
   
 <details>
@@ -1090,11 +1048,12 @@ Deletes an API.
 
 </details>
  
+ --- 
  ---
   - Collections
   - Items
   - Folders
-  - GET Get a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
   
 <details>
@@ -1103,9 +1062,8 @@ Deletes an API.
 Gets information about a folder in a collection.
 
 </details>
- 
- ---
-  - POST Create a folder `https://api.getpostman.com/collections/{{collectionId}}/folders`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a folder `https://api.getpostman.com/collections/{{collectionId}}/folders`
 
   
   *Body*:
@@ -1127,9 +1085,8 @@ You can use this endpoint to to import requests and responses into a newly-creat
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a folder with a blank name.
 
 </details>
- 
- ---
-  - PUT Update a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
   
   *Body*:
@@ -1150,9 +1107,8 @@ Updates a folder in a collection. For a complete list of properties, refer to "F
 This endpoint acts like a PATCH method. It only updates the values that you pass in the request body (for example, the `name` property). The endpoint does **not** update the entire resource.
 
 </details>
- 
- ---
-  - DELETE Delete a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a folder `https://api.getpostman.com/collections/{{collectionId}}/folders/{{folderId}}`
 
   
 <details>
@@ -1164,7 +1120,7 @@ Deletes a folder in a collection.
  
  ---
   - Requests
-  - GET Get a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
   
 <details>
@@ -1173,9 +1129,8 @@ Deletes a folder in a collection.
 Gets information about a request in a collection.
 
 </details>
- 
- ---
-  - POST Create a request `https://api.getpostman.com/collections/{{collectionId}}/requests`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a request `https://api.getpostman.com/collections/{{collectionId}}/requests`
 
   
   *Body*:
@@ -1195,9 +1150,8 @@ Creates a request in a collection. For a complete list of properties, see the [C
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a request with a blank name.
 
 </details>
- 
- ---
-  - PUT Update a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
   
   *Body*:
@@ -1220,9 +1174,8 @@ Updates a request in a collection. For a complete list of properties, see the [C
 - This endpoint does not support changing the folder of a request.
 
 </details>
- 
- ---
-  - DELETE Delete a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a request `https://api.getpostman.com/collections/{{collectionId}}/requests/{{requestId}}`
 
   
 <details>
@@ -1234,7 +1187,7 @@ Deletes a request in a collection.
  
  ---
   - Responses
-  - GET Get a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
   
 <details>
@@ -1243,9 +1196,8 @@ Deletes a request in a collection.
 Gets information about a response in a collection.
 
 </details>
- 
- ---
-  - POST Create a response `https://api.getpostman.com/collections/{{collectionId}}/responses?request={{requestId}}`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a response `https://api.getpostman.com/collections/{{collectionId}}/responses?request={{requestId}}`
 
   
   *Body*:
@@ -1265,9 +1217,8 @@ Creates a request response in a collection. For a complete list of properties, s
 It is recommended that you pass the `name` property in the request body. If you do not, the system uses a null value. As a result, this creates a response with a blank name.
 
 </details>
- 
- ---
-  - PUT Update a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
   
   *Body*:
@@ -1292,9 +1243,8 @@ Updates a response in a collection. For a complete list of properties, see the [
 - This endpoint acts like a PATCH method. It only updates the values that you pass in the request body (for example, the `name` property). The endpoint does **not** update the entire resource.
 
 </details>
- 
- ---
-  - DELETE Delete a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a response `https://api.getpostman.com/collections/{{collectionId}}/responses/{{responseId}}`
 
   
 <details>
@@ -1304,9 +1254,10 @@ Deletes a response in a collection.
 
 </details>
  
+ --- 
  ---
   - Tags
-  - GET Get a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
 
   
 <details>
@@ -1315,9 +1266,8 @@ Deletes a response in a collection.
 Gets all the tags associated with a collection.
 
 </details>
- 
- ---
-  - PUT Update a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a collection's tags `https://api.getpostman.com/collections/{{collectionUid}}/tags`
 
   
   *Body*:
@@ -1347,7 +1297,7 @@ Updates a collection's associated tags. This endpoint replaces all existing tags
  
  ---
   - Forks
-  - POST Create a fork `https://api.getpostman.com/collections/fork/{{collectionId}}?workspace={{workspaceId}}`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a fork `https://api.getpostman.com/collections/fork/{{collectionId}}?workspace={{workspaceId}}`
 
   
   *Body*:
@@ -1365,9 +1315,8 @@ Creates a [fork](https://learning.postman.com/docs/collaborating-in-postman/vers
 *   `label` — The fork's label.
 
 </details>
- 
- ---
-  - POST Merge a fork `https://api.getpostman.com/collections/merge`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Merge a fork `https://api.getpostman.com/collections/merge`
 
   
   *Body*:
@@ -1398,7 +1347,7 @@ You can also include the following optional properties in the request body:
  
  ---
   - Transformations
-  - GET Transform collection to OpenAPI `https://api.getpostman.com/collections/{{collectionId}}/transformations`
+  - ![GET](https://img.shields.io/badge/GET-green) Transform collection to OpenAPI `https://api.getpostman.com/collections/{{collectionId}}/transformations`
 
   
 <details>
@@ -1413,7 +1362,7 @@ This does **not** create an API.
 </details>
  
  ---
-  - POST Create a collection `https://api.getpostman.com/collections`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a collection `https://api.getpostman.com/collections`
 
   
   *Body*:
@@ -1454,9 +1403,8 @@ For more information about the Collection Format, see the [Postman Collection Fo
 - For all other possible values, refer to the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).
 
 </details>
- 
- ---
-  - GET Get a collection `https://api.getpostman.com/collections/{{collectionId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
   
 <details>
@@ -1465,9 +1413,8 @@ For more information about the Collection Format, see the [Postman Collection Fo
 Gets information about a collection. For a complete list of this endpoint's possible values, use the [collection.json schema file](https://schema.postman.com/json/collection/v2.1.0/collection.json).
 
 </details>
- 
- ---
-  - DELETE Delete a collection `https://api.getpostman.com/collections/{{collectionId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
   
 <details>
@@ -1476,9 +1423,8 @@ Gets information about a collection. For a complete list of this endpoint's poss
 Deletes a collection.
 
 </details>
- 
- ---
-  - PUT Replace a collection's data `https://api.getpostman.com/collections/{{collectionId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Replace a collection's data `https://api.getpostman.com/collections/{{collectionId}}`
 
   
   *Body*:
@@ -1524,9 +1470,8 @@ For all other possible values, refer to the [collection.json schema file](https:
 To copy another collection's contents to the given collection, **remove** all ID values before you pass it in this endpoint. If you do not, this endpoint returns an error. These values include the `id`, `uid`, and `postman_id` values.
 
 </details>
- 
- ---
-  - PATCH Update part of a collection `https://api.getpostman.com/collections/{{collectionId}}`
+
+  -  Update part of a collection `https://api.getpostman.com/collections/{{collectionId}}`
 
   
   *Body*:
@@ -1563,9 +1508,8 @@ Updates specific collection information, such as its name, events, or its variab
 For more information about the Collection Format, see the [Postman Collection Format documentation](https://learning.postman.com/collection-format/getting-started/overview/).
 
 </details>
- 
- ---
-  - GET Get all collections `https://api.getpostman.com/collections`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all collections `https://api.getpostman.com/collections`
 
   
 <details>
@@ -1577,7 +1521,7 @@ Gets all of your [collections](https://www.getpostman.com/docs/collections). The
  
  ---
   - Environments
-  - GET Get an environment `https://api.getpostman.com/environments/{{environmentId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
   
 <details>
@@ -1586,9 +1530,8 @@ Gets all of your [collections](https://www.getpostman.com/docs/collections). The
 Gets information about an environment.
 
 </details>
- 
- ---
-  - DELETE Delete an environment `https://api.getpostman.com/environments/{{environmentId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
   
 <details>
@@ -1597,9 +1540,8 @@ Gets information about an environment.
 Deletes an environment.
 
 </details>
- 
- ---
-  - POST Create an environment `https://api.getpostman.com/environments`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create an environment `https://api.getpostman.com/environments`
 
   
   *Body*:
@@ -1635,9 +1577,8 @@ You can also include the following properties:
     * `type` — The variable's type. One of: `secret`, `default`, or `any`.
 
 </details>
- 
- ---
-  - PUT Update an environment `https://api.getpostman.com/environments/{{environmentId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an environment `https://api.getpostman.com/environments/{{environmentId}}`
 
   
   *Body*:
@@ -1673,9 +1614,8 @@ You can also include the following optional properties:
     * `type` — The variable's type. One of: `secret`, `default`, or `any`.
 
 </details>
- 
- ---
-  - GET Get all environments `https://api.getpostman.com/environments`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all environments `https://api.getpostman.com/environments`
 
   
 <details>
@@ -1687,7 +1627,7 @@ Gets information about all of your [environments](https://learning.postman.com/
  
  ---
   - Import
-  - POST Import an OpenAPI definition `https://api.getpostman.com/import/openapi`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Import an OpenAPI definition `https://api.getpostman.com/import/openapi`
 
   
   *Body*:
@@ -1729,9 +1669,8 @@ For more information, refer to the collection's examples.
 If you import with the `file` input method, you **must** use the Postman desktop app. The Postman web app does not support this method type.
 
 </details>
- 
- ---
-  - POST Import an exported Postman data dump file `https://api.getpostman.com/import/exported`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Import an exported Postman data dump file `https://api.getpostman.com/import/exported`
 
   
   *Body*:
@@ -1756,7 +1695,7 @@ This endpoint is **deprecated**.
  ---
   - Mocks
   - Call Logs
-  - GET Get a mock server's call logs `https://api.getpostman.com/mocks/{{mockId}}/call-logs`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a mock server's call logs `https://api.getpostman.com/mocks/{{mockId}}/call-logs`
 
   
 <details>
@@ -1770,7 +1709,7 @@ Call logs contain exchanged request and response data made to mock servers. The 
  
  ---
   - Server Responses
-  - GET Get a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
   
 <details>
@@ -1779,9 +1718,8 @@ Call logs contain exchanged request and response data made to mock servers. The 
 Gets information about a server response.
 
 </details>
- 
- ---
-  - GET Get all server responses `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all server responses `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
 
   
 <details>
@@ -1790,9 +1728,8 @@ Gets information about a server response.
 Gets all of a mock server's server responses.
 
 </details>
- 
- ---
-  - POST Create a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses`
 
   
   *Body*:
@@ -1839,9 +1776,8 @@ You can also include the following optional properties:
 - `body` — A **string** that contains a response body that returns when you call the mock server.
 
 </details>
- 
- ---
-  - PUT Update a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
   
   *Body*:
@@ -1874,9 +1810,8 @@ Updates a mock server's server response. Include at least one of the following p
 - `body` — A **string** that contains a response body that returns when you call the mock server.
 
 </details>
- 
- ---
-  - DELETE Delete a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a server response `https://api.getpostman.com/mocks/{{mockId}}/server-responses/{{serverResponseId}}`
 
   
 <details>
@@ -1887,7 +1822,7 @@ Deletes a mock server's server response.
 </details>
  
  ---
-  - GET Get a mock server `https://api.getpostman.com/mocks/{{mockId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
   
 <details>
@@ -1896,9 +1831,8 @@ Deletes a mock server's server response.
 Gets information about a mock server.
 
 </details>
- 
- ---
-  - POST Create a mock server `https://api.getpostman.com/mocks`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a mock server `https://api.getpostman.com/mocks`
 
   
   *Body*:
@@ -1930,9 +1864,8 @@ You can include the following optional properties in the request body:
 - `private` — A **boolean** value that, if true, sets the mock server as private. By default, mock servers are public and can receive requests from anyone and anywhere.
 
 </details>
- 
- ---
-  - GET Get all mock servers `https://api.getpostman.com/mocks`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all mock servers `https://api.getpostman.com/mocks`
 
   
 <details>
@@ -1945,9 +1878,8 @@ Gets all mock servers. By default, this endpoint returns only mock servers you c
 If you pass both the `teamId` and `workspace` query parameters, this endpoint only accepts the `workspace` query.
 
 </details>
- 
- ---
-  - DELETE Delete a mock server `https://api.getpostman.com/mocks/{{mockId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
   
 <details>
@@ -1956,9 +1888,8 @@ If you pass both the `teamId` and `workspace` query parameters, this endpoint on
 Deletes a mock server.
 
 </details>
- 
- ---
-  - DELETE Unpublish a mock server `https://api.getpostman.com/mocks/{{mockId}}/unpublish`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Unpublish a mock server `https://api.getpostman.com/mocks/{{mockId}}/unpublish`
 
   
 <details>
@@ -1967,9 +1898,8 @@ Deletes a mock server.
 Unpublishes a mock server. Unpublishing a mock server sets its **Access Control** configuration setting to private.
 
 </details>
- 
- ---
-  - POST Publish a mock server `https://api.getpostman.com/mocks/{{mockId}}/publish`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Publish a mock server `https://api.getpostman.com/mocks/{{mockId}}/publish`
 
   
 <details>
@@ -1978,9 +1908,8 @@ Unpublishes a mock server. Unpublishing a mock server sets its **Access Control*
 Publishes a mock server. Publishing a mock server sets its **Access Control** configuration setting to public.
 
 </details>
- 
- ---
-  - PUT Update a mock server `https://api.getpostman.com/mocks/{{mockId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a mock server `https://api.getpostman.com/mocks/{{mockId}}`
 
   
   *Body*:
@@ -2014,7 +1943,7 @@ Updates a mock server. Include the `mock` object in the request body with one or
  
  ---
   - Monitors
-  - POST Create a monitor `https://api.getpostman.com/monitors`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a monitor `https://api.getpostman.com/monitors`
 
   
   *Body*:
@@ -2060,9 +1989,8 @@ Creates a monitor. Include the following properties in the request body:
 | Every weekday (Monday - Friday) at 6am | `0 6 \\\* \\\* MON-FRI` |
 
 </details>
- 
- ---
-  - POST Run a monitor `https://api.getpostman.com/monitors/{{monitorId}}/run`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Run a monitor `https://api.getpostman.com/monitors/{{monitorId}}/run`
 
   
 <details>
@@ -2071,9 +1999,8 @@ Creates a monitor. Include the following properties in the request body:
 Runs a monitor and returns its run results.
 
 </details>
- 
- ---
-  - DELETE Delete a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
   
 <details>
@@ -2082,9 +2009,8 @@ Runs a monitor and returns its run results.
 Deletes a monitor.
 
 </details>
- 
- ---
-  - GET Get all monitors `https://api.getpostman.com/monitors`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all monitors `https://api.getpostman.com/monitors`
 
   
 <details>
@@ -2093,9 +2019,8 @@ Deletes a monitor.
 Gets all monitors.
 
 </details>
- 
- ---
-  - GET Get a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
   
 <details>
@@ -2104,9 +2029,8 @@ Gets all monitors.
 Gets information about a monitor.
 
 </details>
- 
- ---
-  - PUT Update a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a monitor `https://api.getpostman.com/monitors/{{monitorId}}`
 
   
   *Body*:
@@ -2149,7 +2073,7 @@ Updates a monitor. Include the following properties in the request body:
  ---
   - Private API Network
   - Element Requests
-  - PUT Respond to an element add request `https://api.getpostman.com/network/private/network-entity/request/:id`
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Respond to an element add request `https://api.getpostman.com/network/private/network-entity/request/:id`
 
   
   *Body*:
@@ -2173,9 +2097,8 @@ Responds to a user's request to add an element to the [Private API Network](http
     - `approved`
 
 </details>
- 
- ---
-  - GET Get all element add requests `https://api.getpostman.com/network/private/network-entity/request/all`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all element add requests `https://api.getpostman.com/network/private/network-entity/request/all`
 
   
 <details>
@@ -2186,7 +2109,7 @@ Gets a list requests to add elements to the [Private API Network](https://learn
 </details>
  
  ---
-  - GET Get all elements and folders `https://api.getpostman.com/network/private`
+  - ![GET](https://img.shields.io/badge/GET-green) Get all elements and folders `https://api.getpostman.com/network/private`
 
   
 <details>
@@ -2199,9 +2122,8 @@ Gets information about the folders and elements added to your [Private API Netwo
 The `limit` and `offset` parameters are separately applied to elements and folders. For example, if you query a `limit` value of `10` and an `offset` value `0`, the endpoint returns 10 elements and 10 folders for a total of 20 items. The `totalCount` property in the `meta` response is the total count of **both** elements and folders.
 
 </details>
- 
- ---
-  - POST Add an element or folder `https://api.getpostman.com/network/private`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Add an element or folder `https://api.getpostman.com/network/private`
 
   
   *Body*:
@@ -2249,9 +2171,8 @@ In the `elementType` object, include the following values:
 - `parentFolderId` — An **integer** value that contains the folder's parent folder ID.
 
 </details>
- 
- ---
-  - PUT Update an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
 
   
   *Body*:
@@ -2296,9 +2217,8 @@ You can include the following optional properties:
 - `name` — A **string** value that contains the folder's new name.
 
 </details>
- 
- ---
-  - DELETE Remove an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Remove an element or folder `https://api.getpostman.com/network/private/{{elementType}}/{{elementId}}`
 
   
 <details>
@@ -2315,7 +2235,7 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
  ---
   - Workspaces
   - Tags
-  - GET Get a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
 
   
 <details>
@@ -2324,9 +2244,8 @@ Removing an API, collection, or workspace element does **not** delete it. It onl
 Gets all the tags associated with a workspace.
 
 </details>
- 
- ---
-  - PUT Update a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a workspace's tags `https://api.getpostman.com/workspaces/{{workspaceId}}/tags`
 
   
   *Body*:
@@ -2357,7 +2276,7 @@ Updates a workspace's associated tags. This endpoint replaces all existing tags 
  
  ---
   - Global Variables
-  - GET Get global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
+  - ![GET](https://img.shields.io/badge/GET-green) Get global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
 
   
 <details>
@@ -2366,9 +2285,8 @@ Updates a workspace's associated tags. This endpoint replaces all existing tags 
 Gets a workspace's global [variables](https://learning.postman.com/docs/sending-requests/variables/#variable-scopes).
 
 </details>
- 
- ---
-  - PUT Update global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update global variables `https://api.getpostman.com/workspaces/{{workspaceId}}/global-variables`
 
   
   *Body*:
@@ -2398,7 +2316,7 @@ Updates and replaces a workspace's global [variables](https://learning.postman.c
 </details>
  
  ---
-  - PUT Update a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
   
   *Body*:
@@ -2437,9 +2355,8 @@ If you have a linked collection or environment, note the following:
 - If you delete a collection or environment linked between workspaces, the system deletes it in **all** the workspaces.
 
 </details>
- 
- ---
-  - POST Create a workspace `https://api.getpostman.com/workspaces`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a workspace `https://api.getpostman.com/workspaces`
 
   
   *Body*:
@@ -2479,9 +2396,8 @@ If you have a linked collection or environment, note the following:
 - If you delete a collection or environment linked between workspaces, the system deletes it in **all** the workspaces.
 
 </details>
- 
- ---
-  - GET Get a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
   
 <details>
@@ -2511,9 +2427,8 @@ We have **deprecated** the `name` and `uid` responses in the following array of 
 - `apis`
 
 </details>
- 
- ---
-  - DELETE Delete a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a workspace `https://api.getpostman.com/workspaces/{{workspaceId}}`
 
   
 <details>
@@ -2526,9 +2441,8 @@ Deletes an existing workspace.
 If you delete a workspace that has a linked collection or environment with another workspace, this will delete the collection and environment in **all** workspaces.
 
 </details>
- 
- ---
-  - GET Get all workspaces `https://api.getpostman.com/workspaces`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all workspaces `https://api.getpostman.com/workspaces`
 
   
 <details>
@@ -2550,7 +2464,7 @@ This endpoint's response contains the `visibility` field. [Visibility](https://l
  
  ---
   - Tags
-  - GET Get elements by tag `https://api.getpostman.com/tags/:slug/entities`
+  - ![GET](https://img.shields.io/badge/GET-green) Get elements by tag `https://api.getpostman.com/tags/:slug/entities`
 
   
 <details>
@@ -2567,7 +2481,7 @@ Tagging is available on [Postman Enterprise plans](https://www.postman.com/prici
  ---
   - Secret Scanner
   - Detected Secrets
-  - PUT Update detected secret resolution status `https://api.getpostman.com/detected-secrets/{{secretId}}`
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update detected secret resolution status `https://api.getpostman.com/detected-secrets/{{secretId}}`
 
   
   *Body*:
@@ -2596,9 +2510,8 @@ Include the following in the request body:
 - `workspaceId` — The ID of the workspace that contains the secret.
 
 </details>
- 
- ---
-  - GET Get detected secrets locations `https://api.getpostman.com/detected-secrets/{{secretId}}/locations?workspaceId={{workspaceId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get detected secrets locations `https://api.getpostman.com/detected-secrets/{{secretId}}/locations?workspaceId={{workspaceId}}`
 
   
 <details>
@@ -2607,9 +2520,8 @@ Include the following in the request body:
 Gets the locations of secrets detected by Postman's [Secret Scanner](https://learning.postman.com/docs/administration/secret-scanner/).
 
 </details>
- 
- ---
-  - POST Search detected secrets `https://api.getpostman.com/detected-secrets-queries`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Search detected secrets `https://api.getpostman.com/detected-secrets-queries`
 
   
   *Body*:
@@ -2651,7 +2563,7 @@ You can include the following properties in the request body:
 </details>
  
  ---
-  - GET Get secret types `https://api.getpostman.com/secret-types`
+  - ![GET](https://img.shields.io/badge/GET-green) Get secret types `https://api.getpostman.com/secret-types`
 
   
 <details>
@@ -2663,7 +2575,7 @@ Gets the metadata of the secret types supported by Postman's [Secret Scanner](ht
  
  ---
   - User
-  - GET Get authenticated user `https://api.getpostman.com/me`
+  - ![GET](https://img.shields.io/badge/GET-green) Get authenticated user `https://api.getpostman.com/me`
 
   
 <details>
@@ -2679,7 +2591,7 @@ This API returns a different response for users with the [Guest role](https://le
  
  ---
   - Webhooks
-  - POST Create a webhook `https://api.getpostman.com/webhooks`
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a webhook `https://api.getpostman.com/webhooks`
 
   
   *Body*:
@@ -2707,7 +2619,7 @@ Include the following properties in a `webhook` object in the request body:
  ---
   - SCIM 2.0 - Identity
   - User Provisioning
-  - GET Get a user resource `https://api.getpostman.com/scim/v2/Users/{{userId}}`
+  - ![GET](https://img.shields.io/badge/GET-green) Get a user resource `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
   
 <details>
@@ -2716,9 +2628,8 @@ Include the following properties in a `webhook` object in the request body:
 Gets information about a Postman team member.
 
 </details>
- 
- ---
-  - PUT Update a user `https://api.getpostman.com/scim/v2/Users/{{userId}}`
+
+  - ![PUT](https://img.shields.io/badge/PUT-blue) Update a user `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
   
   *Body*:
@@ -2751,9 +2662,8 @@ Updates a user's first and last name in Postman.
 This endpoint only updates a user's first and last name and pushes it to Postman. You cannot update any other user attributes with the SCIM API.
 
 </details>
- 
- ---
-  - POST Create a user `https://api.getpostman.com/scim/v2/Users`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a user `https://api.getpostman.com/scim/v2/Users`
 
   
   *Body*:
@@ -2785,9 +2695,8 @@ If the account already exists, the system sends the user an [email invite](https
 By default, the system assigns new users the developer role. You can [update user roles in Postman](https://learning.postman.com/docs/administration/managing-your-team/managing-your-team/#managing-team-roles).
 
 </details>
- 
- ---
-  - GET Get all user resources `https://api.getpostman.com/scim/v2/Users`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get all user resources `https://api.getpostman.com/scim/v2/Users`
 
   
 <details>
@@ -2796,9 +2705,8 @@ By default, the system assigns new users the developer role. You can [update use
 Gets information about all Postman team members.
 
 </details>
- 
- ---
-  - PATCH Update a user's state `https://api.getpostman.com/scim/v2/Users/{{userId}}`
+
+  -  Update a user's state `https://api.getpostman.com/scim/v2/Users/{{userId}}`
 
   
   *Body*:
@@ -2835,7 +2743,7 @@ By setting the `active` property from `false` to `true`, this reactivates an acc
  
  ---
   - Group Provisioning
-  - GET Get all group resources `https://api.getpostman.com/scim/v2/Groups`
+  - ![GET](https://img.shields.io/badge/GET-green) Get all group resources `https://api.getpostman.com/scim/v2/Groups`
 
   
 <details>
@@ -2844,9 +2752,8 @@ By setting the `active` property from `false` to `true`, this reactivates an acc
 Gets all Postman groups within the team.
 
 </details>
- 
- ---
-  - PATCH Update a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
+
+  -  Update a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
   
   *Body*:
@@ -2888,9 +2795,8 @@ Include the following properties in the request body:
         - `displayName` — The group's display name.
 
 </details>
- 
- ---
-  - GET Get a group resource `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get a group resource `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
   
 <details>
@@ -2899,9 +2805,8 @@ Include the following properties in the request body:
 Gets information about a Postman group within the team.
 
 </details>
- 
- ---
-  - POST Create a group `https://api.getpostman.com/scim/v2/Groups`
+
+  - ![POST](https://img.shields.io/badge/POST-yellow) Create a group `https://api.getpostman.com/scim/v2/Groups`
 
   
   *Body*:
@@ -2923,9 +2828,8 @@ Each account is added to your Postman team and authentication is activated for e
 By default, the system assigns new users the developer role. You can [update user roles in Postman](https://learning.postman.com/docs/administration/managing-your-team/managing-your-team/#managing-team-roles).
 
 </details>
- 
- ---
-  - DELETE Delete a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
+
+  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete a group `https://api.getpostman.com/scim/v2/Groups/{{groupId}}`
 
   
 <details>
@@ -2940,7 +2844,7 @@ User accounts and the data corresponding to them are **not** deleted. To permane
 </details>
  
  ---
-  - GET Get resource types `https://api.getpostman.com/scim/v2/ResourceTypes`
+  - ![GET](https://img.shields.io/badge/GET-green) Get resource types `https://api.getpostman.com/scim/v2/ResourceTypes`
 
   
 <details>
@@ -2949,9 +2853,8 @@ User accounts and the data corresponding to them are **not** deleted. To permane
 Gets all the resource types supported by Postman's SCIM API.
 
 </details>
- 
- ---
-  - GET Get service provider configuration `https://api.getpostman.com/scim/v2/ServiceProviderConfig`
+
+  - ![GET](https://img.shields.io/badge/GET-green) Get service provider configuration `https://api.getpostman.com/scim/v2/ServiceProviderConfig`
 
   
 <details>
@@ -2963,7 +2866,7 @@ Gets the Postman SCIM API configuration information. This includes a list of sup
  
  ---
   - API Security
-  - POST API definition security validation `https://api.getpostman.com/security/api-validation`
+  - ![POST](https://img.shields.io/badge/POST-yellow) API definition security validation `https://api.getpostman.com/security/api-validation`
 
   
   *Body*:
@@ -3004,7 +2907,7 @@ Include the following properties in the request body:
  
  ---
   - Audit Logs
-  - GET Get team audit logs `https://api.getpostman.com/audit/logs`
+  - ![GET](https://img.shields.io/badge/GET-green) Get team audit logs `https://api.getpostman.com/audit/logs`
 
   
 <details>
