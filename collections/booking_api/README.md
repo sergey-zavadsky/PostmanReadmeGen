@@ -226,42 +226,4 @@
   >>>>> ![DELETE](https://img.shields.io/badge/DELETE-red) BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION`
 
   
-  *Body*:
   
-
-
-  >>>>> ![PUT](https://img.shields.io/badge/PUT-blue) BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
-
-  
-  
-  
-
- 
- ---
-  >>> Post booking XML
-  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
-
-  
-
-
-  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingList `{{endpoint}}/hotel-api/1.0/bookings?start={{startDate}}&end={{endDate}}&from=1&to=25`
-
-  
-
-
-  >>>>> ![DELETE](https://img.shields.io/badge/DELETE-red) BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION&language=ENG`
-
-  
-  *Body*:
-  
-
-
-  >>>>> ![PUT](https://img.shields.io/badge/PUT-blue) BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
-
-  
-  
-  
-
- 
- --- 
- ---

@@ -17,8 +17,9 @@ npm run test
 
 ## Usage
 
-1. Place your Postman collections in the 'collections' directory.
+1. Place your Postman collections in the 'collections' directory. As example e.g. "BookingAPI collection"
 2. Make your commits, and PostmanReadmeGen will automatically generate README files for your collections during pre-commit.
+   2.1 Or run "test" script for generating it manually.
 
 ## Contributing
 
