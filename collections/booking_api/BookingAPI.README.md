@@ -1,6 +1,16 @@
 ### BookingAPI
-   - Status
-  - GET Status JSON `{{endpoint}}/hotel-api/1.0/status`
+   > Status
+  >>> ![GET](https://img.shields.io/badge/GET-green) Status JSON `{{endpoint}}/hotel-api/1.0/status`
+
+  
+<details>
+<summary>Description</summary>
+
+Operation to check the working condition of our API
+
+</details>
+
+  >>> ![GET](https://img.shields.io/badge/GET-green) Status XML `{{endpoint}}/hotel-api/1.0/status`
 
   
 <details>
@@ -11,20 +21,9 @@ Operation to check the working condition of our API
 </details>
  
  ---
-  - GET Status XML `{{endpoint}}/hotel-api/1.0/status`
-
-  
-<details>
-<summary>Description</summary>
-
-Operation to check the working condition of our API
-
-</details>
- 
- ---
-  - Availability
-  - Availability JSON
-  - POST Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
+  > Availability
+  >>> Availability JSON
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -62,9 +61,8 @@ Hotel code list search.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -98,9 +96,8 @@ GPS and ratio search.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -142,9 +139,8 @@ In 'examples' you can find different cases of requests and responses.
 Availability filtering by room type.
 
 </details>
- 
- ---
-  - POST Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -187,9 +183,8 @@ Availability filtering by room type.
 Availability filtering by keyword.
 
 </details>
- 
- ---
-  - POST Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -229,9 +224,8 @@ Availability filtering by keyword.
 Availability filtering by accommodation type.
 
 </details>
- 
- ---
-  - POST Filter by board code  `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by board code  `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -274,9 +268,8 @@ Availability filtering by accommodation type.
 Availability filtering by board code.
 
 </details>
- 
- ---
-  - POST Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -322,9 +315,8 @@ Availability filtering by Hotelbeds or TripAdvisor rating.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Other filters `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Other filters `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -378,9 +370,8 @@ Other filters available in the request:
 -hotelPackage[YES/NO/BOTH]
 
 </details>
- 
- ---
-  - POST Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -420,8 +411,8 @@ In 'examples' you can find different cases of requests and responses.
 </details>
  
  ---
-  - Availability XML
-  - POST Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
+  >>> Availability XML
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -451,9 +442,8 @@ Hotel code list search.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by geolocation `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -475,9 +465,8 @@ GPS and ratio search.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by room type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -508,9 +497,8 @@ In 'examples' you can find different cases of requests and responses.
 Availability filtering by room type.
 
 </details>
- 
- ---
-  - POST Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by keyword `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -543,9 +531,8 @@ Availability filtering by room type.
 Availability filtering by keyword.
 
 </details>
- 
- ---
-  - POST Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by accommodation type `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -578,9 +565,8 @@ Availability filtering by keyword.
 Availability filtering by accommodation type.
 
 </details>
- 
- ---
-  - POST Filter by board code `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by board code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -612,9 +598,8 @@ Availability filtering by accommodation type.
 Availability filtering by board code.
 
 </details>
- 
- ---
-  - POST Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Filter by review rating `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -647,9 +632,8 @@ Availability filtering by Hotelbeds or TripAdvisor rating.
 In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Other filters `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Other filters `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -694,9 +678,8 @@ Other filters available in the request:
 -hotelPackage[YES/NO/BOTH]
 
 </details>
- 
- ---
-  - POST Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability with inclusions `{{endpoint}}/hotel-api/1.0/hotels`
 
   
   *Body*:
@@ -726,10 +709,11 @@ In 'examples' you can find different cases of requests and responses.
 
 </details>
  
+ --- 
  ---
-  - CheckRate
-  - CheckRate JSON
-  - POST CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
+  > CheckRate
+  >>> CheckRate JSON
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
   *Body*:
@@ -751,8 +735,8 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
 </details>
  
  ---
-  - CheckRate XML
-  - POST CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
+  >>> CheckRate XML
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
   *Body*:
@@ -771,10 +755,11 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
 
 </details>
  
+ --- 
  ---
-  - Booking
-  - Booking JSON
-  - POST Booking `{{endpoint}}/hotel-api/1.0/bookings`
+  > Booking
+  >>> Booking JSON
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.0/bookings`
 
   
   *Body*:
@@ -815,9 +800,8 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
 Standard Booking operation. In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
   *Body*:
@@ -871,9 +855,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 AT_HOTEL booking example
 
 </details>
- 
- ---
-  - POST Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
   *Body*:
@@ -942,8 +925,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 </details>
  
  ---
-  - Booking XML
-  - POST Booking `{{endpoint}}/hotel-api/1.2/bookings`
+  >>> Booking XML
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.2/bookings`
 
   
   *Body*:
@@ -969,9 +952,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 Standard Booking operation. In 'examples' you can find different cases of requests and responses.
 
 </details>
- 
- ---
-  - POST Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking (creditCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
   *Body*:
@@ -1011,9 +993,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 AT_HOTEL booking example
 
 </details>
- 
- ---
-  - POST Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
+
+  >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking (prepaymentCard) `{{secure_endpoint}}/hotel-api/1.0/bookings`
 
   
   *Body*:
@@ -1063,10 +1044,11 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 
 </details>
  
+ --- 
  ---
-  - Post booking
-  - Post booking  JSON
-  - GET BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
+  > Post booking
+  >>> Post booking  JSON
+  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
 <details>
@@ -1075,9 +1057,8 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 The BookingDetail operation retuns all the information of the requested booking.
 
 </details>
- 
- ---
-  - GET BookingList `{{endpoint}}/hotel-api/1.0/bookings?from=1&to=25&start={{fromDate}}&end={{toDate}}`
+
+  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingList `{{endpoint}}/hotel-api/1.0/bookings?from=1&to=25&start={{fromDate}}&end={{toDate}}`
 
   
 <details>
@@ -1086,9 +1067,8 @@ The BookingDetail operation retuns all the information of the requested booking.
 The BookingList operation returns a list of bookings based on the search criteria.
 
 </details>
- 
- ---
-  - DELETE BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION`
+
+  >>>>> ![DELETE](https://img.shields.io/badge/DELETE-red) BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION`
 
   
   *Body*:
@@ -1099,9 +1079,8 @@ The BookingList operation returns a list of bookings based on the search criteri
 The BookingCancellation operation cancels a booking or simulates a booking cancellation.
 
 </details>
- 
- ---
-  - PUT BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
+
+  >>>>> ![PUT](https://img.shields.io/badge/PUT-blue) BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
   *Body*:
@@ -1211,8 +1190,8 @@ In 'examples' you can find different cases of requests and responses.
 </details>
  
  ---
-  - Post booking XML
-  - GET BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
+  >>> Post booking XML
+  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
 <details>
@@ -1221,9 +1200,8 @@ In 'examples' you can find different cases of requests and responses.
 The BookingDetail operation retuns all the information of the requested booking.
 
 </details>
- 
- ---
-  - GET BookingList `{{endpoint}}/hotel-api/1.0/bookings?start={{startDate}}&end={{endDate}}&from=1&to=25`
+
+  >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingList `{{endpoint}}/hotel-api/1.0/bookings?start={{startDate}}&end={{endDate}}&from=1&to=25`
 
   
 <details>
@@ -1232,9 +1210,8 @@ The BookingDetail operation retuns all the information of the requested booking.
 The BookingList operation returns a list of bookings based on the search criteria.
 
 </details>
- 
- ---
-  - DELETE BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION&language=ENG`
+
+  >>>>> ![DELETE](https://img.shields.io/badge/DELETE-red) BookingCancellation `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}?cancellationFlag=CANCELLATION&language=ENG`
 
   
   *Body*:
@@ -1245,9 +1222,8 @@ The BookingList operation returns a list of bookings based on the search criteri
 The BookingCancellation operation cancels a booking or simulates a booking cancellation.
 
 </details>
- 
- ---
-  - PUT BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
+
+  >>>>> ![PUT](https://img.shields.io/badge/PUT-blue) BookingChange `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
   *Body*:
@@ -1290,4 +1266,5 @@ In 'examples' you can find different cases of requests and responses.
 
 </details>
  
+ --- 
  ---

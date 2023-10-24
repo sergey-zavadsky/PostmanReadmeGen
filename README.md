@@ -12,13 +12,14 @@ PostmanReadmeGen is a tool that streamlines the process of integrating Postman c
 To get started, you'll need to install the necessary dependencies. Run the following command:
 
 ```bash
-npm install
+npm run test
 ```
 
 ## Usage
 
-1. Place your Postman collections in the 'collections' directory.
+1. Place your Postman collections in the 'collections' directory. As example e.g. "BookingAPI collection"
 2. Make your commits, and PostmanReadmeGen will automatically generate README files for your collections during pre-commit.
+   2.1 Or run "test" script for generating it manually.
 
 ## Contributing
 
