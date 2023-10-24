@@ -12,7 +12,7 @@ PostmanReadmeGen is a tool that streamlines the process of integrating Postman c
 To get started, you'll need to install the necessary dependencies. Run the following command:
 
 ```bash
-npm install
+npm run firstRun
 ```
 
 ## Usage

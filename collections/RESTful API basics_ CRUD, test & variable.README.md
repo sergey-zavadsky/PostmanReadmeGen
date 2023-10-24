@@ -1,5 +1,5 @@
 ### RESTful API basics: CRUD, test & variable
-   - ![GET](https://img.shields.io/badge/GET-green) Get data `{{base_url}}/info?id=1`
+   > ![GET](https://img.shields.io/badge/GET-green) Get data `{{base_url}}/info?id=1`
 
   
 <details>
@@ -11,7 +11,7 @@ A successful GET response will have a `200 OK` status, and should include some k
 
 </details>
 
-  - ![POST](https://img.shields.io/badge/POST-yellow) Post data `{{base_url}}/info`
+  > ![POST](https://img.shields.io/badge/POST-yellow) Post data `{{base_url}}/info`
 
   
   *Body*:
@@ -30,7 +30,7 @@ A successful POST request typically returns a `200 OK` or `201 Created` response
 
 </details>
 
-  - ![PUT](https://img.shields.io/badge/PUT-blue) Update data `{{base_url}}/info?id=1`
+  > ![PUT](https://img.shields.io/badge/PUT-blue) Update data `{{base_url}}/info?id=1`
 
   
   *Body*:
@@ -46,7 +46,7 @@ A successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No
 
 </details>
 
-  - ![DELETE](https://img.shields.io/badge/DELETE-red) Delete data `{{base_url}}/info?id=1`
+  > ![DELETE](https://img.shields.io/badge/DELETE-red) Delete data `{{base_url}}/info?id=1`
 
   
   *Body*:

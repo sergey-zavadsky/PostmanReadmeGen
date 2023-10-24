@@ -8,11 +8,11 @@ const httpMethodColors = {
 	GET: 'GET-green',
 	PUT: 'PUT-blue',
 	DELETE: 'DELETE-red',
-	// Add more HTTP methods and colors as needed
 };
 
 export function generateMarkdownTree(data, depth = 0) {
 	const { indentation, separator } = commonData;
+	const folderMark = '>'.repeat(depth);
 
 	if (Array.isArray(data)) {
 		return data.map((item) => generateMarkdownTree(item, depth + 1)).join('\n');
@@ -26,7 +26,7 @@ export function generateMarkdownTree(data, depth = 0) {
 		const itemName = request
 			? `${methodColorBadge} ${name} \`${request.url.raw}\`\n`
 			: name;
-		let markdown = `${indentation}- ${itemName}\n`;
+		let markdown = `${indentation}${folderMark} ${itemName}\n`;
 
 		if (request && request.body) {
 			if (

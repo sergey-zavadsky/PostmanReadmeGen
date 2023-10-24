@@ -1,4 +1,5 @@
 import { generateMarkdown } from './src/markdown/markdown.js';
+import { generateSummaryTree } from './src/markdown/summary.js';
 import { readJsonData } from './src/utils/utils.js';
 
 async function main() {
@@ -9,6 +10,7 @@ async function main() {
 		const jsonData = await readJsonData(dir);
 		if (jsonData) {
 			generateMarkdown(jsonData, dir);
+			generateSummaryTree(jsonData, dir);
 		} else {
 			console.error('Error: JSON data is missing or invalid.');
 		}
