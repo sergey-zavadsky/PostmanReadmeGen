@@ -6,7 +6,7 @@
 	"scripts": {
 		"force": "sh .husky/pre-commit",
 		"prepare": "npx husky install",
-		"firstRun": "node script.js",
+		"test": "node script.js",
 		"deploy": "npm publish"
 	},
 	"author": "Siarhei Zavadski",
