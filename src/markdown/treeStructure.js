@@ -13,6 +13,7 @@ const httpMethodColors = {
 export function generateMarkdownTree(data, depth = 0) {
 	const { indentation, separator } = commonData;
 	const folderMark = '>'.repeat(depth);
+	const isFirstLevel = depth === 1; // Check if it's the first level
 
 	if (Array.isArray(data)) {
 		return data.map((item) => generateMarkdownTree(item, depth + 1)).join('\n');
@@ -24,8 +25,10 @@ export function generateMarkdownTree(data, depth = 0) {
 			  })`
 			: '';
 		const itemName = request
-			? `${methodColorBadge} ${name} \`${request.url.raw}\`\n`
-			: `### ${name}`;
+			? `${methodColorBadge} ${isFirstLevel ? '### ' : ''}${name} \`${
+					request.url.raw
+			  }\`\n`
+			: `${isFirstLevel ? '### ' : ''}${name}`;
 		let markdown = `${indentation}${folderMark} ${itemName}\n`;
 
 		if (request && request.body) {

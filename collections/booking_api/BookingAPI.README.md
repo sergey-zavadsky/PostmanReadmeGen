@@ -22,7 +22,7 @@ Operation to check the working condition of our API
  
  ---
   > ### Availability
-  >>> ### Availability JSON
+  >>> Availability JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
@@ -411,7 +411,7 @@ In 'examples' you can find different cases of requests and responses.
 </details>
  
  ---
-  >>> ### Availability XML
+  >>> Availability XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
@@ -712,7 +712,7 @@ In 'examples' you can find different cases of requests and responses.
  --- 
  ---
   > ### CheckRate
-  >>> ### CheckRate JSON
+  >>> CheckRate JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
@@ -735,7 +735,7 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
 </details>
  
  ---
-  >>> ### CheckRate XML
+  >>> CheckRate XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
@@ -758,7 +758,7 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
  --- 
  ---
   > ### Booking
-  >>> ### Booking JSON
+  >>> Booking JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.0/bookings`
 
   
@@ -925,7 +925,7 @@ Standard Booking operation. In 'examples' you can find different cases of reques
 </details>
  
  ---
-  >>> ### Booking XML
+  >>> Booking XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.2/bookings`
 
   
@@ -1047,7 +1047,7 @@ Standard Booking operation. In 'examples' you can find different cases of reques
  --- 
  ---
   > ### Post booking
-  >>> ### Post booking  JSON
+  >>> Post booking  JSON
   >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
@@ -1190,7 +1190,7 @@ In 'examples' you can find different cases of requests and responses.
 </details>
  
  ---
-  >>> ### Post booking XML
+  >>> Post booking XML
   >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
