@@ -3,7 +3,7 @@ import { dirname } from 'path';
 import { generateMarkdownTree } from './treeStructure.js';
 
 export function generateMarkdown(data, dir) {
-	const markdownTree = `### ${data?.info?.name}\n ${generateMarkdownTree(
+	const markdownTree = `## ${data?.info?.name}\n ${generateMarkdownTree(
 		data.item,
 	)}`;
 

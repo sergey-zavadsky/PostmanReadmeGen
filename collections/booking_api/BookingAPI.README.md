@@ -1,5 +1,5 @@
-### BookingAPI
-   > Status
+## BookingAPI
+   > ### Status
   >>> ![GET](https://img.shields.io/badge/GET-green) Status JSON `{{endpoint}}/hotel-api/1.0/status`
 
   
@@ -21,7 +21,7 @@ Operation to check the working condition of our API
 </details>
  
  ---
-  > Availability
+  > ### Availability
   >>> Availability JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
@@ -711,7 +711,7 @@ In 'examples' you can find different cases of requests and responses.
  
  --- 
  ---
-  > CheckRate
+  > ### CheckRate
   >>> CheckRate JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
@@ -757,7 +757,7 @@ Standard CheckRate operation. In 'examples' you can find different cases of requ
  
  --- 
  ---
-  > Booking
+  > ### Booking
   >>> Booking JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.0/bookings`
 
@@ -1046,7 +1046,7 @@ Standard Booking operation. In 'examples' you can find different cases of reques
  
  --- 
  ---
-  > Post booking
+  > ### Post booking
   >>> Post booking  JSON
   >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 

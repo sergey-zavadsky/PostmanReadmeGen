@@ -5,7 +5,7 @@ import { dirname } from 'path';
 export function generateSummaryTree(data, dir) {
 	const directory = dirname(dir);
 	const fileName = `${directory}/README.md`;
-	const markdownTree = `### ${data?.info?.name}\n ${generateMarkdownTree(
+	const markdownTree = `## ${data?.info?.name}\n ${generateMarkdownTree(
 		data.item,
 	)}`;
 
