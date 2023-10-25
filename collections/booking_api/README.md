@@ -1,5 +1,5 @@
-### BookingAPI
-   > Status
+## BookingAPI
+   > ### Status
   >>> ![GET](https://img.shields.io/badge/GET-green) Status JSON `{{endpoint}}/hotel-api/1.0/status`
 
   
@@ -11,8 +11,8 @@
 
  
  ---
-  > Availability
-  >>> Availability JSON
+  > ### Availability
+  >>> ### Availability JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
@@ -77,7 +77,7 @@
 
  
  ---
-  >>> Availability XML
+  >>> ### Availability XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Availability by hotel code `{{endpoint}}/hotel-api/1.0/hotels`
 
   
@@ -143,8 +143,8 @@
  
  --- 
  ---
-  > CheckRate
-  >>> CheckRate JSON
+  > ### CheckRate
+  >>> ### CheckRate JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
@@ -153,7 +153,7 @@
 
  
  ---
-  >>> CheckRate XML
+  >>> ### CheckRate XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) CheckRate `{{endpoint}}/hotel-api/1.0/checkrates`
 
   
@@ -163,8 +163,8 @@
  
  --- 
  ---
-  > Booking
-  >>> Booking JSON
+  > ### Booking
+  >>> ### Booking JSON
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.0/bookings`
 
   
@@ -187,7 +187,7 @@
 
  
  ---
-  >>> Booking XML
+  >>> ### Booking XML
   >>>>> ![POST](https://img.shields.io/badge/POST-yellow) Booking `{{endpoint}}/hotel-api/1.2/bookings`
 
   
@@ -211,8 +211,8 @@
  
  --- 
  ---
-  > Post booking
-  >>> Post booking  JSON
+  > ### Post booking
+  >>> ### Post booking  JSON
   >>>>> ![GET](https://img.shields.io/badge/GET-green) BookingDetail `{{endpoint}}/hotel-api/1.0/bookings/{{bookingReference}}`
 
   
