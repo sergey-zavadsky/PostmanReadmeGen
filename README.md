@@ -1,25 +1,25 @@
 # PostmanReadmeGen
 
-PostmanReadmeGen is a tool that streamlines the process of integrating Postman collections with GIT, enabling the automatic generation of README files during pre-commits. This tool is designed for those looking to create better-looking documentation for their Postman collections within their GitHub repositories
+PostmanReadmeGen is a tool that generates documentation from Postman collections into README files. It creates two sections within the README:
+
+1. **Summary**: A concise summary of the Postman collection.
+2. **Detailed**: This section includes detailed information from the collection.
 
 ## Key Features
 
 - Simplifies the documentation of Postman collections for your GitHub projects.
-- Could be integrated with Husky to automate README generation on pre-commit.
+- Automatically generates a README with both a summary and detailed sections.
 
 ## Installation
 
-To get started, you'll need to install the necessary dependencies. Run the following command:
+To get started, import `generateTrees` and provide a folder with your Postman collections.
 
-```bash
-npm run test
+```javascript
+import { generateTrees } from 'postmanreadmegen';
+generateTrees('collection');
 ```
 
-## Usage
-
-1. Place your Postman collections in the 'collections' directory. As example e.g. "BookingAPI collection"
-2. Make your commits, and PostmanReadmeGen will automatically generate README files for your collections during pre-commit.
-   2.1 Or run "test" script for generating it manually.
+Then simply run `node yourfile.js`.
 
 ## Contributing
 
@@ -27,7 +27,7 @@ Contributions are welcome. Feel free to open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License, which you can read in the LICENSE file.
 
 ## Author
 
