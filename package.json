@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sergey-zavadsky/PostmanReadmeGen.git"
+		"url": "git+https://github.com/sergey-zavadsky/PostmanReadmeGen.git"
 	},
 	"keywords": [
 		"Postman",
