@@ -4,8 +4,8 @@ PostmanReadmeGen is a tool that streamlines the process of integrating Postman c
 
 ## Key Features
 
-- Integration with Husky to automate README generation on pre-commit.
 - Simplifies the documentation of Postman collections for your GitHub projects.
+- Could be integrated with Husky to automate README generation on pre-commit.
 
 ## Installation
 
