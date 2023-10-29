@@ -10,7 +10,7 @@
 		"deploy": "npm publish"
 	},
 	"author": "Siarhei Zavadski",
-	"license": "ISC",
+	"license": "MIT",
 	"type": "module",
 	"husky": {
 		"hooks": {
@@ -18,7 +18,7 @@
 		}
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
+		"@sergey-zavadsky:registry": "https://npm.pkg.github.com"
 	},
 	"repository": {
 		"type": "git",
