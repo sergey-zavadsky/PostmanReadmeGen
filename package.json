@@ -11,11 +11,11 @@
 	"license": "MIT",
 	"type": "module",
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
+		"registry": "https://registry.npmjs.org/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sergey-zavadsky/PostmanReadmeGen.git"
+		"url": "git+https://github.com/sergey-zavadsky/PostmanReadmeGen.git"
 	},
 	"keywords": [
 		"Postman",
