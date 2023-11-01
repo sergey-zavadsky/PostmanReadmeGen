@@ -1,34 +1,41 @@
-name: Node.js Package
+name: Publish NPM Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - TestConfig
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
 
-  publish-gpr:
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build and Test
+        run: npm run build
+
+  publish:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
-          scope: '@siarhei-zavadski'
-      - run: npm ci
-      - run: npm publish --access public
+
+      - name: Publish to NPM
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
