@@ -1,5 +1,5 @@
 {
-	"name": "@sergey-zavadsky/postmanreadmegen",
+	"name": "postmanreadmegen",
 	"version": "1.0.6",
 	"description": "PostmanReadmeGen is a versatile tool that simplifies the process of generating informative README files for your GitHub repositories. It seamlessly integrates with Postman collections and includes a convenient pre-commit script to automate this task. With PostmanReadmeGen, you can efficiently document your API endpoints and ensure that your project's documentation stays up-to-date",
 	"main": "script.js",
