@@ -12,7 +12,7 @@
 	"type": "module",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
-	},
+  },
 	"repository": "git://github.com/sergey-zavadsky/PostmanReadmeGen.git",
 	"keywords": [
 		"Postman",
