@@ -58,7 +58,11 @@ export function generateMarkdownTree(data, depth = 0) {
 		}
 
 		if (request && request.description) {
-			markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n`;
+			const description = request.description
+				.split('\n')
+				.map((line) => `${folderMark}${line}`)
+				.join('\n');
+			markdown += `${folderMark}<details>\n${description}\n${folderMark}</details>\n${folderMark}\n${folderMark} ---`;
 		}
 
 		if (item && item.length >= 0) {
