@@ -7,11 +7,6 @@ export function generateMarkdown(data, dir) {
 		data.item,
 	)}`;
 
-	const cleanedMarkdownTree = markdownTree
-		.split('\n')
-		.filter((line) => line.trim() !== '')
-		.join('\n');
-
 	if (data?.info && data?.info?.name) {
 		const directory = dirname(dir);
 		const fileName = `${directory}/${data?.info?.name.replace(
@@ -20,7 +15,7 @@ export function generateMarkdown(data, dir) {
 		)}.README.md`;
 
 		try {
-			writeFileSync(fileName, cleanedMarkdownTree);
+			writeFileSync(fileName, markdownTree);
 			console.log(`Markdown file created: ${fileName}`);
 		} catch (error) {
 			console.error(`Error writing file: ${error}`);

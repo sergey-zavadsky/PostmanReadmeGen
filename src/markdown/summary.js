@@ -20,13 +20,8 @@ export function generateSummaryTree(data, dir) {
 		.replace(bodyContentRegex, '')
 		.replace(body, '');
 
-	const cleanedMarkdownTree = summaryMarkdown
-		.split('\n')
-		.filter((line) => line.trim() !== '')
-		.join('\n');
-
 	try {
-		writeFileSync(fileName, cleanedMarkdownTree, { flag: 'a' });
+		writeFileSync(fileName, summaryMarkdown, { flag: 'a' });
 		console.log(`Summary Markdown file created: ${fileName}`);
 	} catch (error) {
 		console.error(`Error writing file: ${error}`);
