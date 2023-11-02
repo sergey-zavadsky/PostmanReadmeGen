@@ -42,7 +42,7 @@ export function generateMarkdownTree(data, depth = 0) {
 				markdown += `\n${indentation} *Body*:\n \`\`\`\n`;
 				bodyData.forEach((item) => {
 					const { key, value, type } = item;
-					markdown += `${indentation} - ${key}: ${value}\n`;
+					markdown += `${indentation}${key}: ${value}\n`;
 				});
 				markdown += `${indentation} \`\`\`\n`;
 			} else if (request.body.mode === 'raw' && request.body.raw) {
