@@ -1,6 +1,6 @@
 const commonData = {
-	indentation: '  ',
-	separator: ' \n ---',
+	indentation: '\n',
+	separator: ' ',
 };
 
 const httpMethodColors = {
@@ -29,7 +29,7 @@ export function generateMarkdownTree(data, depth = 0) {
 					request.url?.raw
 			  }\`\n`
 			: `${isFirstLevel ? '### ' : ''}${name}\n`;
-		let markdown = `${indentation}${folderMark} ${itemName}\n`;
+		let markdown = `${indentation}${folderMark}${itemName}${folderMark}\n`;
 
 		if (request && request.body) {
 			if (
