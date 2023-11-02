@@ -13,7 +13,8 @@ const httpMethodColors = {
 export function generateMarkdownTree(data, depth = 0) {
 	const { indentation, separator } = commonData;
 	const folderMark = '>'.repeat(depth);
-	const isFirstLevel = depth === 1; // Check if it's the first level
+	const isFirstLevel = depth === 1;
+	const isSecondLevel = depth === 0;
 
 	if (Array.isArray(data)) {
 		return data.map((item) => generateMarkdownTree(item, depth + 1)).join('\n');
@@ -25,7 +26,7 @@ export function generateMarkdownTree(data, depth = 0) {
 			  })`
 			: '';
 		const itemName = request
-			? `${methodColorBadge} ${isFirstLevel ? '### ' : ''}${name} \`${
+			? `${methodColorBadge} ${isSecondLevel ? '###' : ''}${name} \`${
 					request.url?.raw
 			  }\`\n`
 			: `${isFirstLevel ? '### ' : ''}${name}\n`;
@@ -38,11 +39,12 @@ export function generateMarkdownTree(data, depth = 0) {
 			) {
 				const bodyMode = request.body.mode;
 				const bodyData = request.body[bodyMode];
-				markdown += `${indentation}\n  *Body*:\n`;
+				markdown += `\n${indentation} *Body*:\n \`\`\`\n`;
 				bodyData.forEach((item) => {
 					const { key, value, type } = item;
-					markdown += `${indentation}\n    - ${key}: ${value} (${type})\n`;
+					markdown += `${indentation} - ${key}: ${value}\n`;
 				});
+				markdown += `${indentation} \`\`\`\n`;
 			} else if (request.body.mode === 'raw' && request.body.raw) {
 				const xmlString = 'xmlns';
 				if (request.body.raw.includes(xmlString)) {
@@ -51,7 +53,7 @@ export function generateMarkdownTree(data, depth = 0) {
 					markdown += `${indentation}\n  *Body*:\n  \`\`\`json\n${request.body.raw}\n  \`\`\`\n`;
 				}
 			} else {
-				markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}\n${request.body.raw}\n  \`\`\`\n`;
+				markdown += `${indentation}\n  *Body*:\n  \`\`\`${request.body.mode}${request.body.raw}  \`\`\`\n`;
 			}
 		}
 
@@ -59,11 +61,14 @@ export function generateMarkdownTree(data, depth = 0) {
 			markdown += `${indentation}\n<details>\n<summary>Description</summary>\n\n${request.description}\n\n</details>\n`;
 		}
 
-		if (item && item.length > 0) {
-			markdown += `${generateMarkdownTree(item, depth + 1)}${separator}`;
+		if (item && item.length >= 0) {
+			markdown += `${indentation}${generateMarkdownTree(
+				item,
+				depth + 1,
+			)}${separator}`;
 		}
 
-		return markdown;
+		return `${indentation}${markdown}${indentation}`;
 	}
 	return '';
 }

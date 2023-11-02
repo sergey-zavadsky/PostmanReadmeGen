@@ -26,7 +26,7 @@ export function generateSummaryTree(data, dir) {
 		.join('\n');
 
 	try {
-		writeFileSync(fileName, `${cleanedMarkdownTree}\n`, { flag: 'a' });
+		writeFileSync(fileName, `\n${cleanedMarkdownTree}\n`, { flag: 'a' });
 		console.log(`Summary Markdown file created: ${fileName}`);
 	} catch (error) {
 		console.error(`Error writing file: ${error}`);
