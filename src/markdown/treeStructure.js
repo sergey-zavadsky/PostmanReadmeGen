@@ -26,9 +26,9 @@ export function generateMarkdownTree(data, depth = 0) {
 			: '';
 		const itemName = request
 			? `${methodColorBadge} ${isFirstLevel ? '### ' : ''}${name} \`${
-					request.url.raw
+					request.url?.raw
 			  }\`\n`
-			: `${isFirstLevel ? '### ' : ''}${name}`;
+			: `${isFirstLevel ? '### ' : ''}${name}\n`;
 		let markdown = `${indentation}${folderMark} ${itemName}\n`;
 
 		if (request && request.body) {
