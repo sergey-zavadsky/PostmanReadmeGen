@@ -5,11 +5,6 @@ PostmanReadmeGen is a tool that generates documentation from Postman collections
 1. **Summary**: A concise summary of the Postman collection.
 2. **Detailed**: This section includes detailed information from the collection.
 
-## Key Features
-
-- Simplifies the documentation of Postman collections for your GitHub projects.
-- Automatically generates a README with both a summary and detailed sections.
-
 ## Installation
 
 To get started, import `generateTrees` and provide a folder with your Postman collections.
