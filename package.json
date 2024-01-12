@@ -1,32 +1,39 @@
 {
-	"name": "postmanreadmegen",
-	"version": "1.1.0",
-	"description": "PostmanReadmeGen is a versatile tool that simplifies the process of generating informative README files for your GitHub repositories. It seamlessly integrates with Postman collections and includes a convenient pre-commit script to automate this task. With PostmanReadmeGen, you can efficiently document your API endpoints and ensure that your project's documentation stays up-to-date",
-	"main": "script.js",
-	"scripts": {
-		"test": "node script.js",
-		"deploy": "npm publish"
-	},
-	"author": "Siarhei Zavadski",
-	"license": "MIT",
-	"type": "module",
-	"publishConfig": {
-		"registry": "https://registry.npmjs.org/"
-	},
-	"repository": "git://github.com/sergey-zavadsky/PostmanReadmeGen.git",
-	"keywords": [
-		"Postman",
-		"documentation",
-		"README",
-		"collection",
-		"generator",
-		"GitHub",
-		"summary",
-		"detailed",
-		"automated documentation",
-		"API",
-		"integration",
-		"tool",
-		"MIT License"
-	]
+  "name": "@sergey-zavadsky/postmanreadmegen",
+  "version": "1.1.0",
+  "description": "PostmanReadmeGen is a versatile tool that simplifies the process of generating informative README files for your GitHub repositories. It seamlessly integrates with Postman collections and includes a convenient pre-commit script to automate this task. With PostmanReadmeGen, you can efficiently document your API endpoints and ensure that your project's documentation stays up-to-date",
+  "main": "script.js",
+  "scripts": {
+    "test": "node script.js",
+    "deploy": "npm publish"
+  },
+  "author": "Siarhei Zavadski",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sergey-zavadsky/PostmanReadmeGen.git"
+  },
+  "keywords": [
+    "Postman",
+    "documentation",
+    "README",
+    "collection",
+    "generator",
+    "GitHub",
+    "summary",
+    "detailed",
+    "automated documentation",
+    "API",
+    "integration",
+    "tool",
+    "MIT License"
+  ],
+  "bugs": {
+    "url": "https://github.com/sergey-zavadsky/PostmanReadmeGen/issues"
+  },
+  "homepage": "https://github.com/sergey-zavadsky/PostmanReadmeGen#readme"
 }
